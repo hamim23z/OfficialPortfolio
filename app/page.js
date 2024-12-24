@@ -7,7 +7,10 @@ import {
   Container,
   Avatar,
   CardMedia,
+  Card, CardContent, Button,
+  CardHeader
 } from "@mui/material";
+
 import Grid from "@mui/material/Grid2";
 import { styled } from "@mui/material/styles";
 import BottomNavigation from "@mui/material/BottomNavigation";
@@ -19,14 +22,13 @@ import BuildIcon from "@mui/icons-material/Build";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 
+{/*Images and Image Stuff*/}
 import Image from "next/image";
 import github_cool from "../public/github_cool.jpg";
 import smart_study_logo from "../public/smart_study_logo.png";
 import smart_translate_logo from "../public/smart_translate_logo.png";
 
-{
-  /*Icons for Fixed Column on Left*/
-}
+{/*Icons for Fixed Column on Left*/}
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
@@ -470,6 +472,22 @@ export default function HomePage() {
               >
                 <br></br>
                 Projects
+              </Typography>
+            </Box>
+
+
+            {/*Third Section on the Right Side*/}
+            <Box>
+              <Typography variant="h1" sx = {{fontFamily: "Kanit", fontWeight: 900, textTransform: "uppercase"}}>
+                <br></br>
+                Experience
+              </Typography>
+            </Box>
+
+            <Box>
+              <Typography variant="h1" sx = {{fontFamily: "Kanit", fontWeight: 900, textTransform: "uppercase"}}>
+                <br></br>
+                Tech Stack
               </Typography>
             </Box>
           </Grid>
