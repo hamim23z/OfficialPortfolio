@@ -18,23 +18,19 @@ import { styled } from "@mui/material/styles";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 
+{/*Navbar Icons*/}
 import HomeIcon from "@mui/icons-material/Home";
 import FolderIcon from "@mui/icons-material/Folder";
 import BuildIcon from "@mui/icons-material/Build";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
-import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 
-{
-  /*Images and Image Stuff*/
-}
+{ /*Images and Image Stuff*/}
 import Image from "next/image";
 import github_cool from "../public/github_cool.jpg";
 import smart_study_logo from "../public/smart_study_logo.png";
 import smart_translate_logo from "../public/smart_translate_logo.png";
 
-{
-  /*Icons for Fixed Column on Left*/
-}
+{/*Icons for Fixed Column on Left*/}
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
@@ -254,16 +250,6 @@ export default function HomePage() {
                   color: "white",
                 }}
               ></BuildIcon>
-            }
-          ></BottomNavigationAction>
-
-          <BottomNavigationAction
-            icon={
-              <ConnectWithoutContactIcon
-                sx={{
-                  color: "white",
-                }}
-              ></ConnectWithoutContactIcon>
             }
           ></BottomNavigationAction>
         </BottomNavigation>
@@ -508,6 +494,7 @@ export default function HomePage() {
                     maxWidth: 300,
                     position: "relative",
                     marginTop: theme.spacing(-3),
+                    aspectRatio: "1/1",
                     [theme.breakpoints.up("md")]: {
                       width: 300,
                       marginLeft: theme.spacing(-3),
@@ -516,25 +503,21 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <CardMedia
-                    image={smart_study_logo}
-                    sx={(theme) => ({
-                      height: 0,
-                      paddingBottom: "100%",
-                      borderRadius: theme.spacing(2),
-                      position: "relative",
-                      "&:after": {
-                        content: '" "',
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        borderRadius: theme.spacing(2),
-                        opacity: 0.5,
-                      },
-                    })}
-                  />
+                  {/*Image here*
+                  <Box>
+                    <Image
+                      src={smart_study_logo}
+                      alt="Smart Study Logo"
+                      fill
+                      sizes="(max-width: 768px) 88vw, 300px"
+                      style={{
+                        objectFit: "cover",
+                        borderRadius: "16px",
+                        background: "transparent",
+                      }}
+                    />
+                  </Box>
+                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -546,14 +529,15 @@ export default function HomePage() {
                       display: "inline-block",
                     }}
                   >
-                    CURRENT PROJECT | JavaScript, Next.JS, React, MUI, OpenAI, Firebase 
+                    CURRENT PROJECT | JavaScript, Next.JS, React, MUI, OpenAI,
+                    Firebase
                   </Typography>
                   <Typography
                     variant="h5"
                     sx={{
                       fontWeight: "bold",
                       marginBottom: "0.35em",
-                      fontFamily: "Kanit"
+                      fontFamily: "Kanit",
                     }}
                   >
                     Smart Study
@@ -563,12 +547,15 @@ export default function HomePage() {
                     sx={{
                       marginBottom: 2,
                       letterSpacing: "0.00938em",
-                      fontFamily: "Kanit"
+                      fontFamily: "Kanit",
                     }}
                   >
-                    Smart Study is a project that I began working on in August. The purpose of this project is to serve as a study website strictly
-                    for engineering students. Users will be able to create flashcards, generate cards using AI, watch videos, take quizzes, and much
-                    more. The waitlist for Smart Study is live, click the button to join!
+                    Smart Study is a project that I began working on in August.
+                    The purpose of this project is to serve as a study website
+                    strictly for engineering students. Users will be able to
+                    create flashcards, generate cards using AI, watch videos,
+                    take quizzes, and much more. The waitlist for Smart Study is
+                    live, click the button to join!
                   </Typography>
                   <Button
                     sx={{
@@ -578,7 +565,7 @@ export default function HomePage() {
                       paddingRight: 3,
                       color: "#ffffff",
                       fontFamily: "Kanit",
-                      marginLeft: "-5px"
+                      marginLeft: "-5px",
                     }}
                   >
                     Read more
@@ -586,7 +573,6 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              
               {/*Second Card*/}
               <Card
                 sx={(theme) => ({
@@ -616,6 +602,7 @@ export default function HomePage() {
                     maxWidth: 300,
                     position: "relative",
                     marginTop: theme.spacing(-3),
+                    aspectRatio: "1/1",
                     [theme.breakpoints.up("md")]: {
                       width: 300,
                       marginLeft: theme.spacing(-3),
@@ -624,25 +611,21 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <CardMedia
-                    image={smart_translate_logo}
-                    sx={(theme) => ({
-                      height: 0,
-                      paddingBottom: "100%",
-                      borderRadius: theme.spacing(2),
-                      position: "relative",
-                      "&:after": {
-                        content: '" "',
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        borderRadius: theme.spacing(2),
-                        opacity: 0.5,
-                      },
-                    })}
-                  />
+                  {/*Image here*
+                  <Box>
+                    <Image
+                      src={smart_study_logo}
+                      alt="Smart Study Logo"
+                      fill
+                      sizes="(max-width: 768px) 88vw, 300px"
+                      style={{
+                        objectFit: "cover",
+                        borderRadius: "16px",
+                        background: "transparent",
+                      }}
+                    />
+                  </Box>
+                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -654,14 +637,15 @@ export default function HomePage() {
                       display: "inline-block",
                     }}
                   >
-                    CURRENT PROJECT | JavaScript, Next.JS, React, MUI, Google APIs
+                    CURRENT PROJECT | JavaScript, Next.JS, React, MUI, Google
+                    APIs
                   </Typography>
                   <Typography
                     variant="h5"
                     sx={{
                       fontWeight: "bold",
                       marginBottom: "0.35em",
-                      fontFamily: "Kanit"
+                      fontFamily: "Kanit",
                     }}
                   >
                     Smart Translate
@@ -674,9 +658,12 @@ export default function HomePage() {
                       fontFamily: "Kanit",
                     }}
                   >
-                    Smart Translate is a project that I began working on very recently. The purpose of this project is to serve as a translation website
-                    for text, speech, and videos. Users will be able to enter text, use their mic, or input a YouTube video and then select a language for
-                    it to be translated. There is no site or waitlist for this project yet.  
+                    Smart Translate is a project that I began working on very
+                    recently. The purpose of this project is to serve as a
+                    translation website for text, speech, and videos. Users will
+                    be able to enter text, use their mic, or input a YouTube
+                    video and then select a language for it to be translated.
+                    There is no site or waitlist for this project yet.
                   </Typography>
                   <Button
                     sx={{
@@ -686,14 +673,13 @@ export default function HomePage() {
                       paddingRight: 3,
                       color: "#ffffff",
                       fontFamily: "Kanit",
-                      marginLeft: "-5px"
+                      marginLeft: "-5px",
                     }}
                   >
                     Read more
                   </Button>
                 </CardContent>
               </Card>
-
 
               {/*Third Card*/}
               <Card
@@ -724,6 +710,7 @@ export default function HomePage() {
                     maxWidth: 300,
                     position: "relative",
                     marginTop: theme.spacing(-3),
+                    aspectRatio: "1/1",
                     [theme.breakpoints.up("md")]: {
                       width: 300,
                       marginLeft: theme.spacing(-3),
@@ -732,25 +719,21 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <CardMedia
-                    image={smart_translate_logo}
-                    sx={(theme) => ({
-                      height: 0,
-                      paddingBottom: "100%",
-                      borderRadius: theme.spacing(2),
-                      position: "relative",
-                      "&:after": {
-                        content: '" "',
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        borderRadius: theme.spacing(2),
-                        opacity: 0.5,
-                      },
-                    })}
-                  />
+                  {/*Image here*
+                  <Box>
+                    <Image
+                      src={smart_study_logo}
+                      alt="Smart Study Logo"
+                      fill
+                      sizes="(max-width: 768px) 88vw, 300px"
+                      style={{
+                        objectFit: "cover",
+                        borderRadius: "16px",
+                        background: "transparent",
+                      }}
+                    />
+                  </Box>
+                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -762,14 +745,14 @@ export default function HomePage() {
                       display: "inline-block",
                     }}
                   >
-                    August 2024 | JavaScript, Next.JS, React, MUI, OpenAI 
+                    August 2024 | JavaScript, Next.JS, React, MUI, OpenAI
                   </Typography>
                   <Typography
                     variant="h5"
                     sx={{
                       fontWeight: "bold",
                       marginBottom: "0.35em",
-                      fontFamily: "Kanit"
+                      fontFamily: "Kanit",
                     }}
                   >
                     Chronicle AI
@@ -779,12 +762,15 @@ export default function HomePage() {
                     sx={{
                       marginBottom: 2,
                       letterSpacing: "0.00938em",
-                      fontFamily: "Kanit"
+                      fontFamily: "Kanit",
                     }}
                   >
-                    ChronicleAI is a project that me and my friends worked on in August 2024, a lot of the project was completed in August and we made
-                    minor tweaks after. The purpose of this project is to serve as an AI chatbot for Computer Science students. Users can ask anything 
-                    CS related . The project is completed, click the button to check it out!  
+                    ChronicleAI is a project that me and my friends worked on in
+                    August 2024, a lot of the project was completed in August
+                    and we made minor tweaks after. The purpose of this project
+                    is to serve as an AI chatbot for Computer Science students.
+                    Users can ask anything CS related . The project is
+                    completed, click the button to check it out!
                   </Typography>
                   <Button
                     sx={{
@@ -794,14 +780,13 @@ export default function HomePage() {
                       paddingRight: 3,
                       color: "#ffffff",
                       fontFamily: "Kanit",
-                      marginLeft: "-5px"
+                      marginLeft: "-5px",
                     }}
                   >
                     Read more
                   </Button>
                 </CardContent>
               </Card>
-
 
               {/*Fourth Card*/}
               <Card
@@ -832,6 +817,7 @@ export default function HomePage() {
                     maxWidth: 300,
                     position: "relative",
                     marginTop: theme.spacing(-3),
+                    aspectRatio: "1/1",
                     [theme.breakpoints.up("md")]: {
                       width: 300,
                       marginLeft: theme.spacing(-3),
@@ -840,25 +826,21 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <CardMedia
-                    image={smart_translate_logo}
-                    sx={(theme) => ({
-                      height: 0,
-                      paddingBottom: "100%",
-                      borderRadius: theme.spacing(2),
-                      position: "relative",
-                      "&:after": {
-                        content: '" "',
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        borderRadius: theme.spacing(2),
-                        opacity: 0.5,
-                      },
-                    })}
-                  />
+                  {/*Image here*
+                  <Box>
+                    <Image
+                      src={smart_study_logo}
+                      alt="Smart Study Logo"
+                      fill
+                      sizes="(max-width: 768px) 88vw, 300px"
+                      style={{
+                        objectFit: "cover",
+                        borderRadius: "16px",
+                        background: "transparent",
+                      }}
+                    />
+                  </Box>
+                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -877,7 +859,7 @@ export default function HomePage() {
                     sx={{
                       fontWeight: "bold",
                       marginBottom: "0.35em",
-                      fontFamily: "Kanit"
+                      fontFamily: "Kanit",
                     }}
                   >
                     Blizzard Bot
@@ -887,12 +869,15 @@ export default function HomePage() {
                     sx={{
                       marginBottom: 2,
                       letterSpacing: "0.00938em",
-                      fontFamily: "Kanit"
+                      fontFamily: "Kanit",
                     }}
                   >
-                    Blizzard Bot is a Discord based bot that I worked on early 2023 very frequently. The purpose of this project
-                    was to allow users in Discord servers to convert shoe sizes, check websites for bot security, give information
-                    about which companies are the best. This project is completed, click the button to check it out! 
+                    Blizzard Bot is a Discord based bot that I worked on early
+                    2023 very frequently. The purpose of this project was to
+                    allow users in Discord servers to convert shoe sizes, check
+                    websites for bot security, give information about which
+                    companies are the best. This project is completed, click the
+                    button to check it out!
                   </Typography>
                   <Button
                     sx={{
@@ -902,7 +887,7 @@ export default function HomePage() {
                       paddingRight: 3,
                       color: "#ffffff",
                       fontFamily: "Kanit",
-                      marginLeft: "-5px"
+                      marginLeft: "-5px",
                     }}
                   >
                     Read more
@@ -924,8 +909,366 @@ export default function HomePage() {
                 <br></br>
                 Experience
               </Typography>
+
+              {/*First Card*/}
+              <Card
+                sx={(theme) => ({
+                  marginTop: theme.spacing(4),
+                  borderRadius: theme.spacing(2),
+                  transition: "0.3s",
+                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                  position: "relative",
+                  maxWidth: "100%",
+                  overflow: "initial",
+                  background: "#ffffff",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  paddingBottom: theme.spacing(2),
+                  [theme.breakpoints.up("md")]: {
+                    flexDirection: "row",
+                    paddingTop: theme.spacing(2),
+                  },
+                  width: "73%",
+                  height: "250px",
+                })}
+              >
+                <Box
+                  sx={(theme) => ({
+                    width: "88%",
+                    maxWidth: 300,
+                    position: "relative",
+                    marginTop: theme.spacing(-3),
+                    aspectRatio: "1/1",
+                    [theme.breakpoints.up("md")]: {
+                      width: 300,
+                      marginLeft: theme.spacing(-3),
+                      marginTop: 0,
+                      flexShrink: 0,
+                    },
+                  })}
+                >
+                  {/*Image here*
+                  <Box>
+                    <Image
+                      src={smart_study_logo}
+                      alt="Smart Study Logo"
+                      fill
+                      sizes="(max-width: 768px) 88vw, 300px"
+                      style={{
+                        objectFit: "cover",
+                        borderRadius: "16px",
+                        background: "transparent",
+                      }}
+                    />
+                  </Box>
+                  */}
+                </Box>
+                <CardContent>
+                  <Typography
+                    variant="overline"
+                    sx={{
+                      letterSpacing: "1px",
+                      fontSize: 12,
+                      marginBottom: "0.875em",
+                      display: "inline-block",
+                    }}
+                  >
+                    July 2024 - Present | NYC Department of Records
+                  </Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      fontWeight: "bold",
+                      marginBottom: "0.35em",
+                      fontFamily: "Kanit",
+                    }}
+                  >
+                    Software Engineer Intern
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      marginBottom: 2,
+                      letterSpacing: "0.00938em",
+                      fontFamily: "Kanit",
+                    }}
+                  >
+                    Filler text here.
+                  </Typography>
+                </CardContent>
+              </Card>
+
+              {/*Second Card*/}
+              <Card
+                sx={(theme) => ({
+                  marginTop: theme.spacing(4),
+                  borderRadius: theme.spacing(2),
+                  transition: "0.3s",
+                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                  position: "relative",
+                  maxWidth: "100%",
+                  overflow: "initial",
+                  background: "#ffffff",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  paddingBottom: theme.spacing(2),
+                  [theme.breakpoints.up("md")]: {
+                    flexDirection: "row",
+                    paddingTop: theme.spacing(2),
+                  },
+                  width: "73%",
+                  height: "250px",
+                })}
+              >
+                <Box
+                  sx={(theme) => ({
+                    width: "88%",
+                    maxWidth: 300,
+                    position: "relative",
+                    marginTop: theme.spacing(-3),
+                    aspectRatio: "1/1",
+                    [theme.breakpoints.up("md")]: {
+                      width: 300,
+                      marginLeft: theme.spacing(-3),
+                      marginTop: 0,
+                      flexShrink: 0,
+                    },
+                  })}
+                >
+                  {/*Image here*
+                  <Box>
+                    <Image
+                      src={smart_study_logo}
+                      alt="Smart Study Logo"
+                      fill
+                      sizes="(max-width: 768px) 88vw, 300px"
+                      style={{
+                        objectFit: "cover",
+                        borderRadius: "16px",
+                        background: "transparent",
+                      }}
+                    />
+                  </Box>
+                  */}
+                </Box>
+                <CardContent>
+                  <Typography
+                    variant="overline"
+                    sx={{
+                      letterSpacing: "1px",
+                      fontSize: 12,
+                      marginBottom: "0.875em",
+                      display: "inline-block",
+                    }}
+                  >
+                    June 2023 - Oct 2023 | NYC Department of Design and
+                    Construction
+                  </Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      fontWeight: "bold",
+                      marginBottom: "0.35em",
+                      fontFamily: "Kanit",
+                    }}
+                  >
+                    Software Engineer & Information Technology Intern
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      marginBottom: 2,
+                      letterSpacing: "0.00938em",
+                      fontFamily: "Kanit",
+                    }}
+                  >
+                    Filler text here.
+                  </Typography>
+                </CardContent>
+              </Card>
+
+              {/*Third Card*/}
+              <Card
+                sx={(theme) => ({
+                  marginTop: theme.spacing(4),
+                  borderRadius: theme.spacing(2),
+                  transition: "0.3s",
+                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                  position: "relative",
+                  maxWidth: "100%",
+                  overflow: "initial",
+                  background: "#ffffff",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  paddingBottom: theme.spacing(2),
+                  [theme.breakpoints.up("md")]: {
+                    flexDirection: "row",
+                    paddingTop: theme.spacing(2),
+                  },
+                  width: "73%",
+                  height: "250px",
+                })}
+              >
+                <Box
+                  sx={(theme) => ({
+                    width: "88%",
+                    maxWidth: 300,
+                    position: "relative",
+                    marginTop: theme.spacing(-3),
+                    aspectRatio: "1/1",
+                    [theme.breakpoints.up("md")]: {
+                      width: 300,
+                      marginLeft: theme.spacing(-3),
+                      marginTop: 0,
+                      flexShrink: 0,
+                    },
+                  })}
+                >
+                  {/*Image here*
+                  <Box>
+                    <Image
+                      src={smart_study_logo}
+                      alt="Smart Study Logo"
+                      fill
+                      sizes="(max-width: 768px) 88vw, 300px"
+                      style={{
+                        objectFit: "cover",
+                        borderRadius: "16px",
+                        background: "transparent",
+                      }}
+                    />
+                  </Box>
+                  */}
+                </Box>
+                <CardContent>
+                  <Typography
+                    variant="overline"
+                    sx={{
+                      letterSpacing: "1px",
+                      fontSize: 12,
+                      marginBottom: "0.875em",
+                      display: "inline-block",
+                    }}
+                  >
+                    July 2021 - June 2023 | Trademark Services
+                  </Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      fontWeight: "bold",
+                      marginBottom: "0.35em",
+                      fontFamily: "Kanit",
+                    }}
+                  >
+                    Sneaker Information Developer
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      marginBottom: 2,
+                      letterSpacing: "0.00938em",
+                      fontFamily: "Kanit",
+                    }}
+                  >
+                    Filler text here.
+                  </Typography>
+                </CardContent>
+              </Card>
+
+              {/*Fourth Card*/}
+              <Card
+                sx={(theme) => ({
+                  marginTop: theme.spacing(4),
+                  borderRadius: theme.spacing(2),
+                  transition: "0.3s",
+                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                  position: "relative",
+                  maxWidth: "100%",
+                  overflow: "initial",
+                  background: "#ffffff",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  paddingBottom: theme.spacing(2),
+                  [theme.breakpoints.up("md")]: {
+                    flexDirection: "row",
+                    paddingTop: theme.spacing(2),
+                  },
+                  width: "73%",
+                  height: "250px",
+                })}
+              >
+                <Box
+                  sx={(theme) => ({
+                    width: "88%",
+                    maxWidth: 300,
+                    position: "relative",
+                    marginTop: theme.spacing(-3),
+                    aspectRatio: "1/1",
+                    [theme.breakpoints.up("md")]: {
+                      width: 300,
+                      marginLeft: theme.spacing(-3),
+                      marginTop: 0,
+                      flexShrink: 0,
+                    },
+                  })}
+                >
+                  {/*Image here*
+                  <Box>
+                    <Image
+                      src={smart_study_logo}
+                      alt="Smart Study Logo"
+                      fill
+                      sizes="(max-width: 768px) 88vw, 300px"
+                      style={{
+                        objectFit: "cover",
+                        borderRadius: "16px",
+                        background: "transparent",
+                      }}
+                    />
+                  </Box>
+                  */}
+                </Box>
+                <CardContent>
+                  <Typography
+                    variant="overline"
+                    sx={{
+                      letterSpacing: "1px",
+                      fontSize: 12,
+                      marginBottom: "0.875em",
+                      display: "inline-block",
+                    }}
+                  >
+                    Oct 2020 - Feb 2021 | Fyllan
+                  </Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      fontWeight: "bold",
+                      marginBottom: "0.35em",
+                      fontFamily: "Kanit",
+                    }}
+                  >
+                    Web Development Intern
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      marginBottom: 2,
+                      letterSpacing: "0.00938em",
+                      fontFamily: "Kanit",
+                    }}
+                  >
+                    Filler text here.
+                  </Typography>
+                </CardContent>
+              </Card>
             </Box>
 
+            {/*Fourth Section - Tech Stack*/}
             <Box>
               <Typography
                 variant="h1"
