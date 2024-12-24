@@ -1,6 +1,13 @@
 "use client";
 import React from "react";
-import { Box, Typography, Paper, Container } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Paper,
+  Container,
+  Avatar,
+  CardMedia,
+} from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { styled } from "@mui/material/styles";
 import BottomNavigation from "@mui/material/BottomNavigation";
@@ -14,6 +21,8 @@ import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact
 
 import Image from "next/image";
 import github_cool from "../public/github_cool.jpg";
+import smart_study_logo from "../public/smart_study_logo.png";
+import smart_translate_logo from "../public/smart_translate_logo.png";
 
 {
   /*Icons for Fixed Column on Left*/
@@ -40,6 +49,151 @@ export default function HomePage() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const StyledRoot = styled("div")(() => ({
+    position: "relative",
+    borderRadius: "1rem",
+    minWidth: 320,
+    paddingTop: 60,
+    "&:before": {
+      transition: "0.2s",
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      content: '""',
+      display: "block",
+      borderRadius: "1rem",
+      zIndex: 0,
+      bottom: 0,
+      backgroundColor: "#151312",
+    },
+    "&:hover": {
+      "&:before": {
+        bottom: -6,
+      },
+      "& .MuiAvatar-root": {
+        transform: "scale(1.1)",
+        boxShadow: "0 6px 20px 0 rgba(0,0,0,0.38)",
+      },
+    },
+  }));
+
+  const CardMediaCover = styled(Box)(() => ({
+    borderRadius: "1rem",
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    top: 0,
+    left: 0,
+    zIndex: 0,
+    backgroundColor: "rgba(0, 0, 0, 0.08)",
+  }));
+
+  const StyledContent = styled("div")(() => ({
+    position: "relative",
+    zIndex: 1,
+    padding: "1rem",
+    borderRadius: "1rem",
+    boxShadow: "0 6px 16px 0 rgba(0,0,0,0.5)",
+    "&:before": {
+      content: '""',
+      display: "block",
+      position: "absolute",
+      left: 0,
+      top: 1,
+      zIndex: 0,
+      width: "100%",
+      height: "100%",
+      clipPath:
+        "polygon(0% 100%, 0% 35%, 0.3% 33%, 1% 31%, 1.5% 30%, 2% 29%, 2.5% 28.4%, 3% 27.9%, 3.3% 27.6%, 5% 27%,95% 0%,100% 0%, 100% 100%)",
+      borderRadius: "1rem",
+      background: "#151312",
+    },
+  }));
+
+  const AvatarLogo = styled(Box)(() => ({
+    transition: "0.3s",
+    width: 100,
+    height: 100,
+    boxShadow: "0 4px 12px 0 rgba(0,0,0,0.24)",
+    borderRadius: "1rem",
+    position: "relative",
+    overflow: "hidden",
+  }));
+
+  const ProjectCard = ({ cover, logo, title, brand, date }) => {
+    return (
+      <StyledRoot>
+        <CardMediaCover>
+          <Image
+            src={cover}
+            alt="Project Cover"
+            fill
+            style={{
+              objectFit: "cover",
+              borderRadius: "1rem",
+            }}
+          />
+        </CardMediaCover>
+        <StyledContent>
+          <Box position={"relative"} zIndex={1}>
+            <Box display="flex" p={0} gap={2} sx={{ flexWrap: "nowrap" }}>
+              <Box>
+                <AvatarLogo>
+                  <Image
+                    src={logo}
+                    alt="Project Logo"
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </AvatarLogo>
+              </Box>
+              <Box alignSelf="flex-end">
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontFamily: "Kanit",
+                    fontWeight: 700,
+                    color: "#fff",
+                    margin: 0,
+                  }}
+                >
+                  {title}
+                </Typography>
+              </Box>
+            </Box>
+            <Box display="flex" mt={4} alignItems={"center"}>
+              <Box>
+                <Typography
+                  variant="subtitle2"
+                  sx={{
+                    fontFamily: "Kanit",
+                    color: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                  {brand}
+                </Typography>
+              </Box>
+              <Box ml="auto">
+                <Typography
+                  variant="caption"
+                  sx={{
+                    fontFamily: "Kanit",
+                    color: "#fff",
+                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+                    padding: "0.25rem 0.5rem",
+                    borderRadius: "12px",
+                  }}
+                >
+                  {date}
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+        </StyledContent>
+      </StyledRoot>
+    );
   };
 
   return (
@@ -122,7 +276,7 @@ export default function HomePage() {
                   flexDirection: "column",
                   borderRadius: "10px",
                   marginTop: "100px",
-                  marginLeft: "100px",
+                  marginLeft: "150px",
                 }}
               >
                 <Image
@@ -231,8 +385,93 @@ export default function HomePage() {
             </Container>
           </Grid>
 
+          {/*First Section on the Right*/}
           <Grid size={8}>
-            <Typography></Typography>
+            <Box sx={{ marginTop: "70px" }}>
+              <Typography
+                variant="h1"
+                sx={{
+                  fontFamily: "Kanit",
+                  fontWeight: 900,
+                  textTransform: "uppercase",
+                }}
+              >
+                Software
+              </Typography>
+
+              <Typography
+                variant="h1"
+                sx={{
+                  fontFamily: "Kanit",
+                  fontWeight: 900,
+                  textTransform: "uppercase",
+                }}
+              >
+                Engineer
+              </Typography>
+
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  fontFamily: "Kanit",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                }}
+              >
+                Passionate about building projects that can make life easier in
+                any way possible or solve real world problems.
+              </Typography>
+
+              <Box mt={4}>
+                <Grid container spacing={4}>
+                  <Grid
+                    size={6}
+                    sx={{
+                      width: "400px",
+                      maxHeight: "20px",
+                    }}
+                  >
+                    <ProjectCard
+                      brand={"Personal Project"}
+                      date={"Currently Working On"}
+                      cover={smart_study_logo}
+                      logo={smart_study_logo}
+                      title={"Smart Study"}
+                    />
+                  </Grid>
+
+                  <Grid
+                    size={6}
+                    sx={{
+                      width: "400px",
+                    }}
+                  >
+                    <ProjectCard
+                      brand={"Personal Project"}
+                      date={"Currently Working On"}
+                      cover={smart_translate_logo}
+                      logo={smart_translate_logo}
+                      title={"Smart Translate"}
+                    />
+                  </Grid>
+                </Grid>
+              </Box>
+            </Box>
+
+            {/*Second Section on the Right Side*/}
+            <Box>
+              <Typography
+                variant="h1"
+                sx={{
+                  fontFamily: "Kanit",
+                  fontWeight: 900,
+                  textTransform: "uppercase",
+                }}
+              >
+                <br></br>
+                Projects
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
       </Box>
