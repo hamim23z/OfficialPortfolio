@@ -47,6 +47,10 @@ import firebase_logo from "../public/firebase_logo.png";
 import mysql_logo from "../public/mysql_logo.png";
 import chronicleai_logo from "../public/chronicleai_logo.png";
 import blizzardbot_logo from "../public/blizzardbot_logo.png";
+import nycddc_logo from "../public/nycddc_logo.png";
+import fyllan_logo from "../public/fyllan_logo.png";
+import trademark_logo from "../public/trademark_logo.png";
+import doris_logo from "../public/doris_logo.png";
 
 {
   /*Icons for Fixed Column on Left*/
@@ -979,10 +983,9 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  {/*Image here*
                   <Box>
                     <Image
-                      src={smart_study_logo}
+                      src={doris_logo}
                       alt="Smart Study Logo"
                       fill
                       sizes="(max-width: 768px) 88vw, 300px"
@@ -993,7 +996,6 @@ export default function HomePage() {
                       }}
                     />
                   </Box>
-                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -1068,10 +1070,9 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  {/*Image here*
                   <Box>
                     <Image
-                      src={smart_study_logo}
+                      src={nycddc_logo}
                       alt="Smart Study Logo"
                       fill
                       sizes="(max-width: 768px) 88vw, 300px"
@@ -1082,7 +1083,6 @@ export default function HomePage() {
                       }}
                     />
                   </Box>
-                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -1158,10 +1158,9 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  {/*Image here*
                   <Box>
                     <Image
-                      src={smart_study_logo}
+                      src={trademark_logo}
                       alt="Smart Study Logo"
                       fill
                       sizes="(max-width: 768px) 88vw, 300px"
@@ -1172,7 +1171,6 @@ export default function HomePage() {
                       }}
                     />
                   </Box>
-                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -1247,10 +1245,9 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  {/*Image here*
                   <Box>
                     <Image
-                      src={smart_study_logo}
+                      src={fyllan_logo}
                       alt="Smart Study Logo"
                       fill
                       sizes="(max-width: 768px) 88vw, 300px"
@@ -1261,7 +1258,6 @@ export default function HomePage() {
                       }}
                     />
                   </Box>
-                  */}
                 </Box>
                 <CardContent>
                   <Typography
