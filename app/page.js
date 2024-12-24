@@ -34,6 +34,19 @@ import github_cool from "../public/github_cool.jpg";
 import smart_study_logo from "../public/smart_study_logo.png";
 import smart_translate_logo from "../public/smart_translate_logo.png";
 import html_logo from "../public/html_logo.png";
+import css_logo from "../public/css_logo.png";
+import javascript_logo from "../public/javascript_logo.png";
+import nextjs_logo from "../public/nextjs_logo.png";
+import react_logo from "../public/react_logo.png";
+import mui_logo from "../public/mui_logo.png";
+import python_logo from "../public/python_logo.png";
+import flask_logo from "../public/flask_logo.png";
+import docker_logo from "../public/docker_logo.png";
+import openai_logo from "../public/openai_logo.png";
+import firebase_logo from "../public/firebase_logo.png";
+import mysql_logo from "../public/mysql_logo.png";
+import chronicleai_logo from "../public/chronicleai_logo.png";
+import blizzardbot_logo from "../public/blizzardbot_logo.png";
 
 {
   /*Icons for Fixed Column on Left*/
@@ -43,7 +56,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import EmailIcon from "@mui/icons-material/Email";
 import Link from "next/link";
-import { height } from "@mui/system";
+import { borderRadius, height } from "@mui/system";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -511,21 +524,19 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  {/*Image here*
                   <Box>
                     <Image
                       src={smart_study_logo}
                       alt="Smart Study Logo"
-                      fill
-                      sizes="(max-width: 768px) 88vw, 300px"
                       style={{
                         objectFit: "cover",
-                        borderRadius: "16px",
+                        borderRadius: "200px",
                         background: "transparent",
+                        width: "300px",
+                        height: "300px",
                       }}
                     />
                   </Box>
-                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -565,19 +576,21 @@ export default function HomePage() {
                     take quizzes, and much more. The waitlist for Smart Study is
                     live, click the button to join!
                   </Typography>
-                  <Button
-                    sx={{
-                      backgroundColor: "red",
-                      borderRadius: 100,
-                      paddingLeft: 3,
-                      paddingRight: 3,
-                      color: "#ffffff",
-                      fontFamily: "Kanit",
-                      marginLeft: "-5px",
-                    }}
-                  >
-                    Read more
-                  </Button>
+                  <Link href="https://smartstudycs.vercel.app/" target="_blank">
+                    <Button
+                      sx={{
+                        backgroundColor: "red",
+                        borderRadius: 100,
+                        paddingLeft: 3,
+                        paddingRight: 3,
+                        color: "#ffffff",
+                        fontFamily: "Kanit",
+                        marginLeft: "-5px",
+                      }}
+                    >
+                      Read more
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
 
@@ -619,21 +632,19 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  {/*Image here*
                   <Box>
                     <Image
-                      src={smart_study_logo}
+                      src={smart_translate_logo}
                       alt="Smart Study Logo"
-                      fill
-                      sizes="(max-width: 768px) 88vw, 300px"
                       style={{
                         objectFit: "cover",
-                        borderRadius: "16px",
+                        borderRadius: "200px",
                         background: "transparent",
+                        width: "300px",
+                        height: "300px",
                       }}
                     />
                   </Box>
-                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -671,21 +682,27 @@ export default function HomePage() {
                     translation website for text, speech, and videos. Users will
                     be able to enter text, use their mic, or input a YouTube
                     video and then select a language for it to be translated.
-                    There is no site or waitlist for this project yet.
+                    There is no site or waitlist for this project yet, but check
+                    out the GitHub repo below!
                   </Typography>
-                  <Button
-                    sx={{
-                      backgroundColor: "red",
-                      borderRadius: 100,
-                      paddingLeft: 3,
-                      paddingRight: 3,
-                      color: "#ffffff",
-                      fontFamily: "Kanit",
-                      marginLeft: "-5px",
-                    }}
+                  <Link
+                    href="https://github.com/hamim23z/SmartTranslate-Main"
+                    target="_blank"
                   >
-                    Read more
-                  </Button>
+                    <Button
+                      sx={{
+                        backgroundColor: "red",
+                        borderRadius: 100,
+                        paddingLeft: 3,
+                        paddingRight: 3,
+                        color: "#ffffff",
+                        fontFamily: "Kanit",
+                        marginLeft: "-5px",
+                      }}
+                    >
+                      Read more
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
 
@@ -727,10 +744,9 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  {/*Image here*
                   <Box>
                     <Image
-                      src={smart_study_logo}
+                      src={chronicleai_logo}
                       alt="Smart Study Logo"
                       fill
                       sizes="(max-width: 768px) 88vw, 300px"
@@ -741,7 +757,6 @@ export default function HomePage() {
                       }}
                     />
                   </Box>
-                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -780,19 +795,24 @@ export default function HomePage() {
                     Users can ask anything CS related . The project is
                     completed, click the button to check it out!
                   </Typography>
-                  <Button
-                    sx={{
-                      backgroundColor: "red",
-                      borderRadius: 100,
-                      paddingLeft: 3,
-                      paddingRight: 3,
-                      color: "#ffffff",
-                      fontFamily: "Kanit",
-                      marginLeft: "-5px",
-                    }}
+                  <Link
+                    href="https://chronicle-ai-omega.vercel.app/"
+                    target="_blank"
                   >
-                    Read more
-                  </Button>
+                    <Button
+                      sx={{
+                        backgroundColor: "red",
+                        borderRadius: 100,
+                        paddingLeft: 3,
+                        paddingRight: 3,
+                        color: "#ffffff",
+                        fontFamily: "Kanit",
+                        marginLeft: "-5px",
+                      }}
+                    >
+                      Read more
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
 
@@ -834,10 +854,9 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  {/*Image here*
                   <Box>
                     <Image
-                      src={smart_study_logo}
+                      src={blizzardbot_logo}
                       alt="Smart Study Logo"
                       fill
                       sizes="(max-width: 768px) 88vw, 300px"
@@ -848,7 +867,6 @@ export default function HomePage() {
                       }}
                     />
                   </Box>
-                  */}
                 </Box>
                 <CardContent>
                   <Typography
@@ -887,19 +905,24 @@ export default function HomePage() {
                     companies are the best. This project is completed, click the
                     button to check it out!
                   </Typography>
-                  <Button
-                    sx={{
-                      backgroundColor: "red",
-                      borderRadius: 100,
-                      paddingLeft: 3,
-                      paddingRight: 3,
-                      color: "#ffffff",
-                      fontFamily: "Kanit",
-                      marginLeft: "-5px",
-                    }}
+                  <Link
+                    href="https://github.com/hamim23z/BlizzardBot1"
+                    target="_blank"
                   >
-                    Read more
-                  </Button>
+                    <Button
+                      sx={{
+                        backgroundColor: "red",
+                        borderRadius: 100,
+                        paddingLeft: 3,
+                        paddingRight: 3,
+                        color: "#ffffff",
+                        fontFamily: "Kanit",
+                        marginLeft: "-5px",
+                      }}
+                    >
+                      Read more
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </Box>
@@ -1290,329 +1313,175 @@ export default function HomePage() {
                 Tech Stack
               </Typography>
 
+              <br></br>
+              <br></br>
+
               <Box
                 sx={{
                   display: "flex",
                   flexDirection: "row",
-                  gap: 15,
+                  paddingBottom: "100px",
                 }}
               >
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    HTML
-                  </Typography>
-                </Box>
+                <Box mt={4}>
+                  <Grid container spacing={20} rowSpacing={7}>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                        maxHeight: "20px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_study_logo}
+                        logo={html_logo}
+                        title={"HTML"}
+                      />
+                    </Grid>
 
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    CSS
-                  </Typography>
-                </Box>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={css_logo}
+                        title={"CSS"}
+                      />
+                    </Grid>
 
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    JavaScript
-                  </Typography>
-                </Box>
-              </Box>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={javascript_logo}
+                        title={"JavaScript"}
+                      />
+                    </Grid>
 
-              {/*Second Row*/}
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: 15,
-                  paddingTop: "75px",
-                }}
-              >
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    Next.JS
-                  </Typography>
-                </Box>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={nextjs_logo}
+                        title={"Next.js"}
+                      />
+                    </Grid>
 
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    React
-                  </Typography>
-                </Box>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={react_logo}
+                        title={"React"}
+                      />
+                    </Grid>
 
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    MUI
-                  </Typography>
-                </Box>
-              </Box>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={mui_logo}
+                        title={"MUI"}
+                      />
+                    </Grid>
 
-              {/*Third Row*/}
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: 15,
-                  paddingTop: "75px",
-                }}
-              >
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    Python
-                  </Typography>
-                </Box>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={python_logo}
+                        title={"Python"}
+                      />
+                    </Grid>
 
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    Flask
-                  </Typography>
-                </Box>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={flask_logo}
+                        title={"Flask"}
+                      />
+                    </Grid>
 
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    Docker
-                  </Typography>
-                </Box>
-              </Box>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={docker_logo}
+                        title={"Docker"}
+                      />
+                    </Grid>
 
-              {/*Fourth Row*/}
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: 15,
-                  paddingTop: "75px",
-                }}
-              >
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    OpenAI
-                  </Typography>
-                </Box>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={openai_logo}
+                        title={"OpenAI"}
+                      />
+                    </Grid>
 
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    Firebase
-                  </Typography>
-                </Box>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={firebase_logo}
+                        title={"Firebase"}
+                      />
+                    </Grid>
 
-                <Box>
-                  <Image
-                    src={html_logo}
-                    alt="Hello world"
-                    style={{
-                      objectFit: "cover",
-                      borderRadius: "50px",
-                      height: "250px",
-                      width: "200px",
-                    }}
-                  ></Image>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontFamily: "Kanit",
-                      fontWeight: 700,
-                      textAlign: "center",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    SQL
-                  </Typography>
+                    <Grid
+                      size={6}
+                      sx={{
+                        width: "200px",
+                      }}
+                    >
+                      <ProjectCard
+                        cover={smart_translate_logo}
+                        logo={mysql_logo}
+                        title={"MySQL"}
+                      />
+                    </Grid>
+                  </Grid>
                 </Box>
               </Box>
             </Box>
