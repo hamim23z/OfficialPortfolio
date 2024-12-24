@@ -18,24 +18,32 @@ import { styled } from "@mui/material/styles";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 
-{/*Navbar Icons*/}
+{
+  /*Navbar Icons*/
+}
 import HomeIcon from "@mui/icons-material/Home";
 import FolderIcon from "@mui/icons-material/Folder";
 import BuildIcon from "@mui/icons-material/Build";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 
-{ /*Images and Image Stuff*/}
+{
+  /*Images and Image Stuff*/
+}
 import Image from "next/image";
 import github_cool from "../public/github_cool.jpg";
 import smart_study_logo from "../public/smart_study_logo.png";
 import smart_translate_logo from "../public/smart_translate_logo.png";
+import html_logo from "../public/html_logo.png";
 
-{/*Icons for Fixed Column on Left*/}
+{
+  /*Icons for Fixed Column on Left*/
+}
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import EmailIcon from "@mui/icons-material/Email";
 import Link from "next/link";
+import { height } from "@mui/system";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -1281,6 +1289,332 @@ export default function HomePage() {
                 <br></br>
                 Tech Stack
               </Typography>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  gap: 15,
+                }}
+              >
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    HTML
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    CSS
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    JavaScript
+                  </Typography>
+                </Box>
+              </Box>
+
+              {/*Second Row*/}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  gap: 15,
+                  paddingTop: "75px",
+                }}
+              >
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    Next.JS
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    React
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    MUI
+                  </Typography>
+                </Box>
+              </Box>
+
+              {/*Third Row*/}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  gap: 15,
+                  paddingTop: "75px",
+                }}
+              >
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    Python
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    Flask
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    Docker
+                  </Typography>
+                </Box>
+              </Box>
+
+              {/*Fourth Row*/}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  gap: 15,
+                  paddingTop: "75px",
+                }}
+              >
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    OpenAI
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    Firebase
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Image
+                    src={html_logo}
+                    alt="Hello world"
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "50px",
+                      height: "250px",
+                      width: "200px",
+                    }}
+                  ></Image>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Kanit",
+                      fontWeight: 700,
+                      textAlign: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    SQL
+                  </Typography>
+                </Box>
+              </Box>
             </Box>
           </Grid>
         </Grid>
