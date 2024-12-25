@@ -268,37 +268,76 @@ export default function HomePage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center", // Centers the BottomNavigation on larger screens
+          }}
+        >
           <BottomNavigation
             showLabels
             value={value}
             onChange={(event, newValue) => setValue(newValue)}
-            sx={{ background: "#151312" }}
+            sx={{
+              background: "#151312",
+              width: "100%", // Takes full width on smaller screens
+              maxWidth: "600px", // Limits width on larger screens
+              justifyContent: "space-between", // Ensures icons are evenly spaced
+              padding: "10px 0",
+            }}
           >
             <Tooltip title="Home" arrow>
               <BottomNavigationAction
-                icon={<HomeIcon sx={{ color: "white" }} />}
+                icon={
+                  <HomeIcon
+                    sx={{
+                      color: "white",
+                      fontSize: { xs: "24px", sm: "28px" },
+                    }}
+                  />
+                }
                 onClick={() => handleNavigation("home")}
               />
             </Tooltip>
 
             <Tooltip title="Projects" arrow>
               <BottomNavigationAction
-                icon={<FolderIcon sx={{ color: "white" }} />}
+                icon={
+                  <FolderIcon
+                    sx={{
+                      color: "white",
+                      fontSize: { xs: "24px", sm: "28px" },
+                    }}
+                  />
+                }
                 onClick={() => handleNavigation("projects")}
               />
             </Tooltip>
 
             <Tooltip title="Experience" arrow>
               <BottomNavigationAction
-                icon={<WorkHistoryIcon sx={{ color: "white" }} />}
+                icon={
+                  <WorkHistoryIcon
+                    sx={{
+                      color: "white",
+                      fontSize: { xs: "24px", sm: "28px" },
+                    }}
+                  />
+                }
                 onClick={() => handleNavigation("experience")}
               />
             </Tooltip>
 
             <Tooltip title="Tech Stack" arrow>
               <BottomNavigationAction
-                icon={<BuildIcon sx={{ color: "white" }} />}
+                icon={
+                  <BuildIcon
+                    sx={{
+                      color: "white",
+                      fontSize: { xs: "24px", sm: "28px" },
+                    }}
+                  />
+                }
                 onClick={() => handleNavigation("techStack")}
               />
             </Tooltip>
