@@ -419,8 +419,22 @@ export default function HomePage() {
                   textTransform: "uppercase",
                 }}
               >
-                Passionate about building projects that can make life easier in
-                any way possible or solve real world problems.
+                <br></br>
+                Hey! I&apos;m Hamim Choudhury, a Computer Science student at The City College of New York. 
+
+                My journey of coding <br></br>started in middle school, where I took a computer course and used MIT&apos;s
+                Scratch as my first language. And
+                <br></br>
+                <br></br>
+                that is how my passion for coding began. I started off by building simple websites and I explored how to code
+                <br></br>
+                myself. I now code on a regular basis, learning a multitude of languages and using them very often. I started
+                <br></br>
+                off as a frontend engineer only, but have now became a full stack engineer. I love to build projects that can 
+                <br></br>
+                solve real world problems and ones that people will use on a regular basis. 
+
+
               </Typography>
 
               <Box mt={4}>
@@ -461,7 +475,7 @@ export default function HomePage() {
 
             {/*Second Section on the Right Side*/}
             <Box>
-              <Typography
+              <Typography 
                 variant="h1"
                 sx={{
                   fontFamily: "Kanit",
