@@ -17,6 +17,7 @@ import Grid from "@mui/material/Grid2";
 import { styled } from "@mui/material/styles";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import Tooltip from "@mui/material/Tooltip";
 
 {
   /*Navbar Icons*/
@@ -240,45 +241,29 @@ export default function HomePage() {
             background: "#151312",
           }}
         >
-          <BottomNavigationAction
-            icon={
-              <HomeIcon
-                sx={{
-                  color: "white",
-                }}
-              ></HomeIcon>
-            }
-          ></BottomNavigationAction>
+          <Tooltip title="Home" arrow>
+            <BottomNavigationAction
+              icon={<HomeIcon sx={{ color: "white" }}></HomeIcon>}
+            ></BottomNavigationAction>
+          </Tooltip>
 
-          <BottomNavigationAction
-            icon={
-              <FolderIcon
-                sx={{
-                  color: "white",
-                }}
-              ></FolderIcon>
-            }
-          ></BottomNavigationAction>
+          <Tooltip title="Projects" arrow>
+            <BottomNavigationAction
+              icon={<FolderIcon sx={{ color: "white" }}></FolderIcon>}
+            ></BottomNavigationAction>
+          </Tooltip>
 
-          <BottomNavigationAction
-            icon={
-              <WorkHistoryIcon
-                sx={{
-                  color: "white",
-                }}
-              ></WorkHistoryIcon>
-            }
-          ></BottomNavigationAction>
+          <Tooltip title="Experience" arrow>
+            <BottomNavigationAction
+              icon={<WorkHistoryIcon sx={{ color: "white" }}></WorkHistoryIcon>}
+            ></BottomNavigationAction>
+          </Tooltip>
 
-          <BottomNavigationAction
-            icon={
-              <BuildIcon
-                sx={{
-                  color: "white",
-                }}
-              ></BuildIcon>
-            }
-          ></BottomNavigationAction>
+          <Tooltip title="Tech Stach" arrow>
+            <BottomNavigationAction
+              icon={<BuildIcon sx={{ color: "white" }}></BuildIcon>}
+            ></BottomNavigationAction>
+          </Tooltip>
         </BottomNavigation>
       </Box>
 
