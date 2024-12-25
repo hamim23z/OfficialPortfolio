@@ -18,6 +18,7 @@ import { styled } from "@mui/material/styles";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Tooltip from "@mui/material/Tooltip";
+import { useState } from "react";
 
 {
   /*Navbar Icons*/
@@ -62,6 +63,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import EmailIcon from "@mui/icons-material/Email";
 import Link from "next/link";
+import Modal from "@mui/material";
 
 import MouseTrail from "./components/mousetrail";
 
@@ -98,7 +100,7 @@ export default function HomePage() {
       borderRadius: "1rem",
       zIndex: 0,
       bottom: 0,
-      backgroundColor: "#151312",
+      backgroundColor: "#6e00b3",
     },
     "&:hover": {
       "&:before": {
@@ -227,6 +229,9 @@ export default function HomePage() {
       </StyledRoot>
     );
   };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [openCardId, setOpenCardId] = useState(null);
 
   return (
     <>
@@ -423,7 +428,7 @@ export default function HomePage() {
                   <Grid
                     size={6}
                     sx={{
-                      width: "400px",
+                      width: "445px",
                       maxHeight: "20px",
                     }}
                   >
@@ -439,7 +444,7 @@ export default function HomePage() {
                   <Grid
                     size={6}
                     sx={{
-                      width: "400px",
+                      width: "445px",
                     }}
                   >
                     <ProjectCard
@@ -468,16 +473,19 @@ export default function HomePage() {
                 Projects
               </Typography>
 
+              {/*First Card*/}
               <Card
                 sx={(theme) => ({
                   marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
-                  transition: "0.3s",
+                  transition: "all 0.3s ease-in-out",
                   boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
-                  background: "#ffffff",
+                  background: "#151312",
+                  color: "white",
+                  border: "1px solid white",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -488,8 +496,15 @@ export default function HomePage() {
                   },
                   width: "73%",
                   height: "300px",
+                  cursor: "pointer",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
+                  },
                 })}
+                onClick={() => setOpenCardId("card1")}
               >
+                {/* Your existing card content remains the same */}
                 <Box
                   sx={(theme) => ({
                     width: "88%",
@@ -557,7 +572,11 @@ export default function HomePage() {
                     take quizzes, and much more. The waitlist for Smart Study is
                     live, click the button to join!
                   </Typography>
-                  <Link href="https://smartstudycs.vercel.app/" target="_blank">
+                  <Link
+                    href="https://smartstudycs.vercel.app/"
+                    target="_blank"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <Button
                       sx={{
                         backgroundColor: "red",
@@ -575,17 +594,183 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
+              {openCardId === "card1" && (
+                <div
+                  style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: "rgba(0, 0, 0, 0.5)",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    zIndex: 1000,
+                    opacity: 0,
+                    animation: "fadeIn 0.3s ease-in-out forwards",
+                  }}
+                  onClick={() => setOpenCardId(null)}
+                >
+                  <style jsx global>{`
+                    @keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+                    @keyframes slideIn {
+                      from {
+                        opacity: 0;
+                        transform: scale(0.9);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+                    }
+                  `}</style>
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      opacity: 0,
+                      animation: "slideIn 0.3s ease-out forwards",
+                      width: "90%",
+                      maxWidth: "1200px",
+                    }}
+                  >
+                    <Card
+                      sx={(theme) => ({
+                        marginTop: 0,
+                        borderRadius: theme.spacing(2),
+                        boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.3)",
+                        position: "relative",
+                        overflow: "initial",
+                        background: "#151312",
+                        color: "white",
+                        border: "1px solid white",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        paddingBottom: theme.spacing(2),
+                        [theme.breakpoints.up("md")]: {
+                          flexDirection: "row",
+                          paddingTop: theme.spacing(2),
+                        },
+                        width: "100%",
+                        height: "400px",
+                      })}
+                    >
+                      <Box
+                        sx={(theme) => ({
+                          width: "88%",
+                          maxWidth: 400,
+                          position: "relative",
+                          marginTop: theme.spacing(-3),
+                          aspectRatio: "1/1",
+                          [theme.breakpoints.up("md")]: {
+                            width: 400,
+                            marginLeft: theme.spacing(-3),
+                            marginTop: 0,
+                            flexShrink: 0,
+                          },
+                        })}
+                      >
+                        <Box>
+                          <Image
+                            src={smart_study_logo}
+                            alt="Smart Study Logo"
+                            style={{
+                              objectFit: "cover",
+                              borderRadius: "200px",
+                              background: "transparent",
+                              width: "400px",
+                              height: "400px",
+                            }}
+                          />
+                        </Box>
+                      </Box>
+                      <CardContent>
+                        <Typography
+                          variant="overline"
+                          sx={{
+                            letterSpacing: "1px",
+                            fontSize: 14,
+                            marginBottom: "0.875em",
+                            display: "inline-block",
+                          }}
+                        >
+                          CURRENT PROJECT | JavaScript, Next.JS, React, MUI,
+                          OpenAI, Firebase
+                        </Typography>
+                        <Typography
+                          variant="h5"
+                          sx={{
+                            fontWeight: "bold",
+                            marginBottom: "0.35em",
+                            fontFamily: "Kanit",
+                            fontSize: "2rem",
+                          }}
+                        >
+                          Smart Study
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginBottom: 2,
+                            letterSpacing: "0.00938em",
+                            fontFamily: "Kanit",
+                            fontSize: "1.1rem",
+                          }}
+                        >
+                          Smart Study is a project that I began working on in
+                          August. The purpose of this project is to serve as a
+                          study website strictly for engineering students. Users
+                          will be able to create flashcards, generate cards
+                          using AI, watch videos, take quizzes, and much more.
+                          The waitlist for Smart Study is live, click the button
+                          to join!
+                        </Typography>
+                        <Link
+                          href="https://smartstudycs.vercel.app/"
+                          target="_blank"
+                        >
+                          <Button
+                            sx={{
+                              backgroundColor: "red",
+                              borderRadius: 100,
+                              paddingLeft: 3,
+                              paddingRight: 3,
+                              color: "#ffffff",
+                              fontFamily: "Kanit",
+                              marginLeft: "-5px",
+                              fontSize: "1.1rem",
+                            }}
+                          >
+                            Read more
+                          </Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              )}
+
               {/*Second Card*/}
               <Card
                 sx={(theme) => ({
-                  marginTop: theme.spacing(4),
+                  marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
-                  transition: "0.3s",
+                  transition: "all 0.3s ease-in-out",
                   boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
-                  background: "#ffffff",
+                  background: "#151312",
+                  color: "white",
+                  border: "1px solid white",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -596,7 +781,13 @@ export default function HomePage() {
                   },
                   width: "73%",
                   height: "300px",
+                  cursor: "pointer",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
+                  },
                 })}
+                onClick={() => setOpenCardId("card2")}
               >
                 <Box
                   sx={(theme) => ({
@@ -669,6 +860,7 @@ export default function HomePage() {
                   <Link
                     href="https://github.com/hamim23z/SmartTranslate-Main"
                     target="_blank"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <Button
                       sx={{
@@ -687,17 +879,183 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
+              {openCardId === "card2" && (
+                <div
+                  style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: `rgba(0, 0, 0, ${isOpen ? 0.7 : 0})`,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    zIndex: 1000,
+                    opacity: 0,
+                    animation: "fadeIn 0.3s ease-in-out forwards",
+                  }}
+                  onClick={() => setOpenCardId(null)}
+                >
+                  <style jsx global>{`
+                    @keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+                    @keyframes slideIn {
+                      from {
+                        opacity: 0;
+                        transform: scale(0.9);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+                    }
+                  `}</style>
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      opacity: 0,
+                      animation: "slideIn 0.3s ease-out forwards",
+                      width: "90%",
+                      maxWidth: "1200px",
+                    }}
+                  >
+                    <Card
+                      sx={(theme) => ({
+                        marginTop: 0,
+                        borderRadius: theme.spacing(2),
+                        boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.3)",
+                        position: "relative",
+                        overflow: "initial",
+                        background: "#151312",
+                        color: "white",
+                        border: "1px solid white",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        paddingBottom: theme.spacing(2),
+                        [theme.breakpoints.up("md")]: {
+                          flexDirection: "row",
+                          paddingTop: theme.spacing(2),
+                        },
+                        width: "100%",
+                        height: "400px",
+                      })}
+                    >
+                      <Box
+                        sx={(theme) => ({
+                          width: "88%",
+                          maxWidth: 400,
+                          position: "relative",
+                          marginTop: theme.spacing(-3),
+                          aspectRatio: "1/1",
+                          [theme.breakpoints.up("md")]: {
+                            width: 400,
+                            marginLeft: theme.spacing(-3),
+                            marginTop: 0,
+                            flexShrink: 0,
+                          },
+                        })}
+                      >
+                        <Box>
+                          <Image
+                            src={smart_translate_logo}
+                            alt="Smart Translate Logo"
+                            style={{
+                              objectFit: "cover",
+                              borderRadius: "200px",
+                              background: "transparent",
+                              width: "400px",
+                              height: "400px",
+                            }}
+                          />
+                        </Box>
+                      </Box>
+                      <CardContent>
+                        <Typography
+                          variant="overline"
+                          sx={{
+                            letterSpacing: "1px",
+                            fontSize: 14,
+                            marginBottom: "0.875em",
+                            display: "inline-block",
+                          }}
+                        >
+                          CURRENT PROJECT | JavaScript, Next.JS, React, MUI,
+                          Google APIs
+                        </Typography>
+                        <Typography
+                          variant="h5"
+                          sx={{
+                            fontWeight: "bold",
+                            marginBottom: "0.35em",
+                            fontFamily: "Kanit",
+                            fontSize: "2rem",
+                          }}
+                        >
+                          Smart Translate
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginBottom: 2,
+                            letterSpacing: "0.00938em",
+                            fontFamily: "Kanit",
+                            fontSize: "1.1rem",
+                          }}
+                        >
+                          Smart Translate is a project that I began working on
+                          very recently. The purpose of this project is to serve
+                          as a translation website for text, speech, and videos.
+                          Users will be able to enter text, use their mic, or
+                          input a YouTube video and then select a language for
+                          it to be translated. There is no site or waitlist for
+                          this project yet, but check out the GitHub repo below!
+                        </Typography>
+                        <Link
+                          href="https://github.com/hamim23z/SmartTranslate-Main"
+                          target="_blank"
+                        >
+                          <Button
+                            sx={{
+                              backgroundColor: "red",
+                              borderRadius: 100,
+                              paddingLeft: 3,
+                              paddingRight: 3,
+                              color: "#ffffff",
+                              fontFamily: "Kanit",
+                              marginLeft: "-5px",
+                              fontSize: "1.1rem",
+                            }}
+                          >
+                            Read more
+                          </Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              )}
+
               {/*Third Card*/}
               <Card
                 sx={(theme) => ({
-                  marginTop: theme.spacing(4),
+                  marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
-                  transition: "0.3s",
+                  transition: "all 0.3s ease-in-out",
                   boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
-                  background: "#ffffff",
+                  background: "#151312",
+                  color: "white",
+                  border: "1px solid white",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -708,7 +1066,13 @@ export default function HomePage() {
                   },
                   width: "73%",
                   height: "300px",
+                  cursor: "pointer",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
+                  },
                 })}
+                onClick={() => setOpenCardId("card3")}
               >
                 <Box
                   sx={(theme) => ({
@@ -728,13 +1092,13 @@ export default function HomePage() {
                   <Box>
                     <Image
                       src={chronicleai_logo}
-                      alt="Smart Study Logo"
-                      fill
-                      sizes="(max-width: 768px) 88vw, 300px"
+                      alt="Chronicle AI Logo"
                       style={{
                         objectFit: "cover",
-                        borderRadius: "16px",
+                        borderRadius: "200px",
                         background: "transparent",
+                        width: "300px",
+                        height: "300px",
                       }}
                     />
                   </Box>
@@ -779,6 +1143,7 @@ export default function HomePage() {
                   <Link
                     href="https://chronicle-ai-omega.vercel.app/"
                     target="_blank"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <Button
                       sx={{
@@ -797,17 +1162,182 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
+              {openCardId === "card3" && (
+                <div
+                  style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: `rgba(0, 0, 0, ${isOpen ? 0.7 : 0})`,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    zIndex: 1000,
+                    opacity: 0,
+                    animation: "fadeIn 0.3s ease-in-out forwards",
+                  }}
+                  onClick={() => setOpenCardId(null)}
+                >
+                  <style jsx global>{`
+                    @keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+                    @keyframes slideIn {
+                      from {
+                        opacity: 0;
+                        transform: scale(0.9);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+                    }
+                  `}</style>
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      opacity: 0,
+                      animation: "slideIn 0.3s ease-out forwards",
+                      width: "90%",
+                      maxWidth: "1200px",
+                    }}
+                  >
+                    <Card
+                      sx={(theme) => ({
+                        marginTop: 0,
+                        borderRadius: theme.spacing(2),
+                        boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.3)",
+                        position: "relative",
+                        overflow: "initial",
+                        background: "#151312",
+                        color: "white",
+                        border: "1px solid white",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        paddingBottom: theme.spacing(2),
+                        [theme.breakpoints.up("md")]: {
+                          flexDirection: "row",
+                          paddingTop: theme.spacing(2),
+                        },
+                        width: "100%",
+                        height: "400px",
+                      })}
+                    >
+                      <Box
+                        sx={(theme) => ({
+                          width: "88%",
+                          maxWidth: 400,
+                          position: "relative",
+                          marginTop: theme.spacing(-3),
+                          aspectRatio: "1/1",
+                          [theme.breakpoints.up("md")]: {
+                            width: 400,
+                            marginLeft: theme.spacing(-3),
+                            marginTop: 0,
+                            flexShrink: 0,
+                          },
+                        })}
+                      >
+                        <Box>
+                          <Image
+                            src={chronicleai_logo}
+                            alt="ChronicleAI Logo"
+                            style={{
+                              objectFit: "cover",
+                              borderRadius: "200px",
+                              background: "transparent",
+                              width: "400px",
+                              height: "400px",
+                            }}
+                          />
+                        </Box>
+                      </Box>
+                      <CardContent>
+                        <Typography
+                          variant="overline"
+                          sx={{
+                            letterSpacing: "1px",
+                            fontSize: 14,
+                            marginBottom: "0.875em",
+                            display: "inline-block",
+                          }}
+                        >
+                          August 2024 | JavaScript, Next.JS, React, MUI, OpenAI
+                        </Typography>
+                        <Typography
+                          variant="h5"
+                          sx={{
+                            fontWeight: "bold",
+                            marginBottom: "0.35em",
+                            fontFamily: "Kanit",
+                            fontSize: "2rem",
+                          }}
+                        >
+                          Chronicle AI
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginBottom: 2,
+                            letterSpacing: "0.00938em",
+                            fontFamily: "Kanit",
+                            fontSize: "1.1rem",
+                          }}
+                        >
+                          ChronicleAI is a project that me and my friends worked
+                          on in August 2024, a lot of the project was completed
+                          in August and we made minor tweaks after. The purpose
+                          of this project is to serve as an AI chatbot for
+                          Computer Science students. Users can ask anything CS
+                          related . The project is completed, click the button
+                          to check it out!
+                        </Typography>
+                        <Link
+                          href="https://chronicle-ai-omega.vercel.app/"
+                          target="_blank"
+                        >
+                          <Button
+                            sx={{
+                              backgroundColor: "red",
+                              borderRadius: 100,
+                              paddingLeft: 3,
+                              paddingRight: 3,
+                              color: "#ffffff",
+                              fontFamily: "Kanit",
+                              marginLeft: "-5px",
+                              fontSize: "1.1rem",
+                            }}
+                          >
+                            Read more
+                          </Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              )}
+
               {/*Fourth Card*/}
               <Card
                 sx={(theme) => ({
-                  marginTop: theme.spacing(4),
+                  marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
-                  transition: "0.3s",
+                  transition: "all 0.3s ease-in-out",
                   boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
-                  background: "#ffffff",
+                  background: "#151312",
+                  color: "white",
+                  border: "1px solid white",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -818,7 +1348,13 @@ export default function HomePage() {
                   },
                   width: "73%",
                   height: "300px",
+                  cursor: "pointer",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
+                  },
                 })}
+                onClick={() => setOpenCardId("card4")}
               >
                 <Box
                   sx={(theme) => ({
@@ -838,13 +1374,13 @@ export default function HomePage() {
                   <Box>
                     <Image
                       src={blizzardbot_logo}
-                      alt="Smart Study Logo"
-                      fill
-                      sizes="(max-width: 768px) 88vw, 300px"
+                      alt="Blizzard Bot Logo"
                       style={{
                         objectFit: "cover",
-                        borderRadius: "16px",
+                        borderRadius: "200px",
                         background: "transparent",
+                        width: "300px",
+                        height: "300px",
                       }}
                     />
                   </Box>
@@ -889,6 +1425,7 @@ export default function HomePage() {
                   <Link
                     href="https://github.com/hamim23z/BlizzardBot1"
                     target="_blank"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <Button
                       sx={{
@@ -906,6 +1443,169 @@ export default function HomePage() {
                   </Link>
                 </CardContent>
               </Card>
+
+              {openCardId === "card4" && (
+                <div
+                  style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: `rgba(0, 0, 0, ${isOpen ? 0.7 : 0})`,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    zIndex: 1000,
+                    opacity: 0,
+                    animation: "fadeIn 0.3s ease-in-out forwards",
+                  }}
+                  onClick={() => setOpenCardId(null)}
+                >
+                  <style jsx global>{`
+                    @keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+                    @keyframes slideIn {
+                      from {
+                        opacity: 0;
+                        transform: scale(0.9);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+                    }
+                  `}</style>
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      opacity: 0,
+                      animation: "slideIn 0.3s ease-out forwards",
+                      width: "90%",
+                      maxWidth: "1200px",
+                    }}
+                  >
+                    <Card
+                      sx={(theme) => ({
+                        marginTop: 0,
+                        borderRadius: theme.spacing(2),
+                        boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.3)",
+                        position: "relative",
+                        overflow: "initial",
+                        background: "#151312",
+                        color: "white",
+                        border: "1px solid white",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        paddingBottom: theme.spacing(2),
+                        [theme.breakpoints.up("md")]: {
+                          flexDirection: "row",
+                          paddingTop: theme.spacing(2),
+                        },
+                        width: "100%",
+                        height: "400px",
+                      })}
+                    >
+                      <Box
+                        sx={(theme) => ({
+                          width: "88%",
+                          maxWidth: 400,
+                          position: "relative",
+                          marginTop: theme.spacing(-3),
+                          aspectRatio: "1/1",
+                          [theme.breakpoints.up("md")]: {
+                            width: 400,
+                            marginLeft: theme.spacing(-3),
+                            marginTop: 0,
+                            flexShrink: 0,
+                          },
+                        })}
+                      >
+                        <Box>
+                          <Image
+                            src={blizzardbot_logo}
+                            alt="Blizzard Bot Logo"
+                            style={{
+                              objectFit: "cover",
+                              borderRadius: "200px",
+                              background: "transparent",
+                              width: "400px",
+                              height: "400px",
+                            }}
+                          />
+                        </Box>
+                      </Box>
+                      <CardContent>
+                        <Typography
+                          variant="overline"
+                          sx={{
+                            letterSpacing: "1px",
+                            fontSize: 14,
+                            marginBottom: "0.875em",
+                            display: "inline-block",
+                          }}
+                        >
+                          January 2023 | Python, Discord.py
+                        </Typography>
+                        <Typography
+                          variant="h5"
+                          sx={{
+                            fontWeight: "bold",
+                            marginBottom: "0.35em",
+                            fontFamily: "Kanit",
+                            fontSize: "2rem",
+                          }}
+                        >
+                          Blizzard Bot
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginBottom: 2,
+                            letterSpacing: "0.00938em",
+                            fontFamily: "Kanit",
+                            fontSize: "1.1rem",
+                          }}
+                        >
+                          Blizzard Bot is a Discord based bot that I worked on
+                          early 2023 very frequently. The purpose of this
+                          project was to allow users in Discord servers to
+                          convert shoe sizes, check websites for bot security,
+                          give information about which companies are the best.
+                          This project is completed, click the button to check
+                          it out!
+                        </Typography>
+                        <Link
+                          href="https://github.com/hamim23z/BlizzardBot1"
+                          target="_blank"
+                        >
+                          <Button
+                            sx={{
+                              backgroundColor: "red",
+                              borderRadius: 100,
+                              paddingLeft: 3,
+                              paddingRight: 3,
+                              color: "#ffffff",
+                              fontFamily: "Kanit",
+                              marginLeft: "-5px",
+                              fontSize: "1.1rem",
+                            }}
+                          >
+                            Read more
+                          </Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              )}
             </Box>
 
             {/*Third Section on the Right Side*/}
@@ -932,7 +1632,9 @@ export default function HomePage() {
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
-                  background: "#ffffff",
+                  background: "#151312",
+                  color: "white",
+                  border: "1px solid white",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -1027,7 +1729,9 @@ export default function HomePage() {
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
-                  background: "#ffffff",
+                  background: "#151312",
+                  color: "white",
+                  border: "1px solid white",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -1124,7 +1828,9 @@ export default function HomePage() {
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
-                  background: "#ffffff",
+                  background: "#151312",
+                  color: "white",
+                  border: "1px solid white",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -1219,7 +1925,9 @@ export default function HomePage() {
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
-                  background: "#ffffff",
+                  background: "#151312",
+                  color: "white",
+                  border: "1px solid white",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
