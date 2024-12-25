@@ -1627,7 +1627,7 @@ export default function HomePage() {
                 sx={(theme) => ({
                   marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
-                  transition: "0.3s",
+                  transition: "all 0.3s ease-in-out",
                   boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
@@ -1644,8 +1644,14 @@ export default function HomePage() {
                     paddingTop: theme.spacing(2),
                   },
                   width: "73%",
-                  height: "250px",
+                  height: "300px",
+                  cursor: "pointer",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
+                  },
                 })}
+                onClick={() => setOpenCardId("card5")}
               >
                 <Box
                   sx={(theme) => ({
@@ -1665,13 +1671,13 @@ export default function HomePage() {
                   <Box>
                     <Image
                       src={doris_logo}
-                      alt="Smart Study Logo"
-                      fill
-                      sizes="(max-width: 768px) 88vw, 300px"
+                      alt="DORIS Logo"
                       style={{
                         objectFit: "cover",
-                        borderRadius: "16px",
+                        borderRadius: "200px",
                         background: "transparent",
+                        width: "300px",
+                        height: "300px",
                       }}
                     />
                   </Box>
@@ -1719,12 +1725,159 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
+              {openCardId === "card5" && (
+                <div
+                  style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: `rgba(0, 0, 0, ${isOpen ? 0.7 : 0})`,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    zIndex: 1000,
+                    opacity: 0,
+                    animation: "fadeIn 0.3s ease-in-out forwards",
+                  }}
+                  onClick={() => setOpenCardId(null)}
+                >
+                  <style jsx global>{`
+                    @keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+                    @keyframes slideIn {
+                      from {
+                        opacity: 0;
+                        transform: scale(0.9);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+                    }
+                  `}</style>
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      opacity: 0,
+                      animation: "slideIn 0.3s ease-out forwards",
+                      width: "90%",
+                      maxWidth: "1200px",
+                    }}
+                  >
+                    <Card
+                      sx={(theme) => ({
+                        marginTop: 0,
+                        borderRadius: theme.spacing(2),
+                        boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.3)",
+                        position: "relative",
+                        overflow: "initial",
+                        background: "#151312",
+                        color: "white",
+                        border: "1px solid white",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        paddingBottom: theme.spacing(2),
+                        [theme.breakpoints.up("md")]: {
+                          flexDirection: "row",
+                          paddingTop: theme.spacing(2),
+                        },
+                        width: "100%",
+                        height: "400px",
+                      })}
+                    >
+                      <Box
+                        sx={(theme) => ({
+                          width: "88%",
+                          maxWidth: 400,
+                          position: "relative",
+                          marginTop: theme.spacing(-3),
+                          aspectRatio: "1/1",
+                          [theme.breakpoints.up("md")]: {
+                            width: 400,
+                            marginLeft: theme.spacing(-3),
+                            marginTop: 0,
+                            flexShrink: 0,
+                          },
+                        })}
+                      >
+                        <Box>
+                          <Image
+                            src={doris_logo}
+                            alt="DORIS Logo"
+                            style={{
+                              objectFit: "cover",
+                              borderRadius: "200px",
+                              background: "transparent",
+                              width: "400px",
+                              height: "400px",
+                            }}
+                          />
+                        </Box>
+                      </Box>
+                      <CardContent>
+                        <Typography
+                          variant="overline"
+                          sx={{
+                            letterSpacing: "1px",
+                            fontSize: 14,
+                            marginBottom: "0.875em",
+                            display: "inline-block",
+                          }}
+                        >
+                          July 2024 - Present | NYC Department of Records
+                        </Typography>
+                        <Typography
+                          variant="h5"
+                          sx={{
+                            fontWeight: "bold",
+                            marginBottom: "0.35em",
+                            fontFamily: "Kanit",
+                            fontSize: "2rem",
+                          }}
+                        >
+                          Software Engineer Intern
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginBottom: 2,
+                            letterSpacing: "0.00938em",
+                            fontFamily: "Kanit",
+                            fontSize: "1.1rem",
+                          }}
+                        >
+                          Developed a Python-based website monitoring system
+                          using Docker and Azure, increasing uptime by 15% and
+                          reducing false positives by 40% while enabling
+                          proactive issue resolution for critical web services.
+                          Created a custom script to compress PDF files
+                          efficiently, reducing file sizes by 60% and improving
+                          performance for web-based document delivery systems.
+                          Led a redesign of the internal company website,
+                          focusing on user-centric design principles to create a
+                          more efficient and visually appealing platform.
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              )}
+
               {/*Second Card*/}
               <Card
                 sx={(theme) => ({
-                  marginTop: theme.spacing(4),
+                  marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
-                  transition: "0.3s",
+                  transition: "all 0.3s ease-in-out",
                   boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
@@ -1741,8 +1894,14 @@ export default function HomePage() {
                     paddingTop: theme.spacing(2),
                   },
                   width: "73%",
-                  height: "250px",
+                  height: "300px",
+                  cursor: "pointer",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
+                  },
                 })}
+                onClick={() => setOpenCardId("card6")}
               >
                 <Box
                   sx={(theme) => ({
@@ -1762,13 +1921,13 @@ export default function HomePage() {
                   <Box>
                     <Image
                       src={nycddc_logo}
-                      alt="Smart Study Logo"
-                      fill
-                      sizes="(max-width: 768px) 88vw, 300px"
+                      alt="DDC Logo"
                       style={{
                         objectFit: "cover",
-                        borderRadius: "16px",
+                        borderRadius: "200px",
                         background: "transparent",
+                        width: "300px",
+                        height: "300px",
                       }}
                     />
                   </Box>
@@ -1818,12 +1977,161 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
+              {openCardId === "card6" && (
+                <div
+                  style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: `rgba(0, 0, 0, ${isOpen ? 0.7 : 0})`,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    zIndex: 1000,
+                    opacity: 0,
+                    animation: "fadeIn 0.3s ease-in-out forwards",
+                  }}
+                  onClick={() => setOpenCardId(null)}
+                >
+                  <style jsx global>{`
+                    @keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+                    @keyframes slideIn {
+                      from {
+                        opacity: 0;
+                        transform: scale(0.9);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+                    }
+                  `}</style>
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      opacity: 0,
+                      animation: "slideIn 0.3s ease-out forwards",
+                      width: "90%",
+                      maxWidth: "1200px",
+                    }}
+                  >
+                    <Card
+                      sx={(theme) => ({
+                        marginTop: 0,
+                        borderRadius: theme.spacing(2),
+                        boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.3)",
+                        position: "relative",
+                        overflow: "initial",
+                        background: "#151312",
+                        color: "white",
+                        border: "1px solid white",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        paddingBottom: theme.spacing(2),
+                        [theme.breakpoints.up("md")]: {
+                          flexDirection: "row",
+                          paddingTop: theme.spacing(2),
+                        },
+                        width: "100%",
+                        height: "400px",
+                      })}
+                    >
+                      <Box
+                        sx={(theme) => ({
+                          width: "88%",
+                          maxWidth: 400,
+                          position: "relative",
+                          marginTop: theme.spacing(-3),
+                          aspectRatio: "1/1",
+                          [theme.breakpoints.up("md")]: {
+                            width: 400,
+                            marginLeft: theme.spacing(-3),
+                            marginTop: 0,
+                            flexShrink: 0,
+                          },
+                        })}
+                      >
+                        <Box>
+                          <Image
+                            src={nycddc_logo}
+                            alt="DDC Logo"
+                            style={{
+                              objectFit: "cover",
+                              borderRadius: "200px",
+                              background: "transparent",
+                              width: "400px",
+                              height: "400px",
+                            }}
+                          />
+                        </Box>
+                      </Box>
+                      <CardContent>
+                        <Typography
+                          variant="overline"
+                          sx={{
+                            letterSpacing: "1px",
+                            fontSize: 14,
+                            marginBottom: "0.875em",
+                            display: "inline-block",
+                          }}
+                        >
+                          June 2023 - Oct 2023 | NYC Department of Design and
+                          Construction
+                        </Typography>
+                        <Typography
+                          variant="h5"
+                          sx={{
+                            fontWeight: "bold",
+                            marginBottom: "0.35em",
+                            fontFamily: "Kanit",
+                            fontSize: "2rem",
+                          }}
+                        >
+                          Software Engineer & Information Technology Intern
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginBottom: 2,
+                            letterSpacing: "0.00938em",
+                            fontFamily: "Kanit",
+                            fontSize: "1.1rem",
+                          }}
+                        >
+                          Developed and implemented a Python-based Hash File
+                          system to efficiently identify Laptop device IDs,
+                          reducing vulnerability assessment time and improving
+                          overall responses. Managed a cross-functional team in
+                          executing a major software system rollout, device
+                          updates and software installations; resulting in a 25%
+                          reduction in downtime. Led the identification of
+                          vulnerabilities, performed repairs, updated hundreds
+                          of devices, and deployed new software, alongside
+                          creating user and support accounts on laptops and
+                          mobile devices.
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              )}
+
               {/*Third Card*/}
               <Card
                 sx={(theme) => ({
-                  marginTop: theme.spacing(4),
+                  marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
-                  transition: "0.3s",
+                  transition: "all 0.3s ease-in-out",
                   boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
@@ -1840,8 +2148,14 @@ export default function HomePage() {
                     paddingTop: theme.spacing(2),
                   },
                   width: "73%",
-                  height: "250px",
+                  height: "300px",
+                  cursor: "pointer",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
+                  },
                 })}
+                onClick={() => setOpenCardId("card7")}
               >
                 <Box
                   sx={(theme) => ({
@@ -1861,13 +2175,13 @@ export default function HomePage() {
                   <Box>
                     <Image
                       src={trademark_logo}
-                      alt="Smart Study Logo"
-                      fill
-                      sizes="(max-width: 768px) 88vw, 300px"
+                      alt="TM Logo"
                       style={{
                         objectFit: "cover",
-                        borderRadius: "16px",
+                        borderRadius: "200px",
                         background: "transparent",
+                        width: "300px",
+                        height: "300px",
                       }}
                     />
                   </Box>
@@ -1915,12 +2229,159 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
+              {openCardId === "card7" && (
+                <div
+                  style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: `rgba(0, 0, 0, ${isOpen ? 0.7 : 0})`,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    zIndex: 1000,
+                    opacity: 0,
+                    animation: "fadeIn 0.3s ease-in-out forwards",
+                  }}
+                  onClick={() => setOpenCardId(null)}
+                >
+                  <style jsx global>{`
+                    @keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+                    @keyframes slideIn {
+                      from {
+                        opacity: 0;
+                        transform: scale(0.9);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+                    }
+                  `}</style>
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      opacity: 0,
+                      animation: "slideIn 0.3s ease-out forwards",
+                      width: "90%",
+                      maxWidth: "1200px",
+                    }}
+                  >
+                    <Card
+                      sx={(theme) => ({
+                        marginTop: 0,
+                        borderRadius: theme.spacing(2),
+                        boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.3)",
+                        position: "relative",
+                        overflow: "initial",
+                        background: "#151312",
+                        color: "white",
+                        border: "1px solid white",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        paddingBottom: theme.spacing(2),
+                        [theme.breakpoints.up("md")]: {
+                          flexDirection: "row",
+                          paddingTop: theme.spacing(2),
+                        },
+                        width: "100%",
+                        height: "400px",
+                      })}
+                    >
+                      <Box
+                        sx={(theme) => ({
+                          width: "88%",
+                          maxWidth: 400,
+                          position: "relative",
+                          marginTop: theme.spacing(-3),
+                          aspectRatio: "1/1",
+                          [theme.breakpoints.up("md")]: {
+                            width: 400,
+                            marginLeft: theme.spacing(-3),
+                            marginTop: 0,
+                            flexShrink: 0,
+                          },
+                        })}
+                      >
+                        <Box>
+                          <Image
+                            src={trademark_logo}
+                            alt="TM Logo"
+                            style={{
+                              objectFit: "cover",
+                              borderRadius: "200px",
+                              background: "transparent",
+                              width: "400px",
+                              height: "400px",
+                            }}
+                          />
+                        </Box>
+                      </Box>
+                      <CardContent>
+                        <Typography
+                          variant="overline"
+                          sx={{
+                            letterSpacing: "1px",
+                            fontSize: 14,
+                            marginBottom: "0.875em",
+                            display: "inline-block",
+                          }}
+                        >
+                          July 2021 - June 2023 | Trademark Services
+                        </Typography>
+                        <Typography
+                          variant="h5"
+                          sx={{
+                            fontWeight: "bold",
+                            marginBottom: "0.35em",
+                            fontFamily: "Kanit",
+                            fontSize: "2rem",
+                          }}
+                        >
+                          Sneaker Information Developer
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginBottom: 2,
+                            letterSpacing: "0.00938em",
+                            fontFamily: "Kanit",
+                            fontSize: "1.1rem",
+                          }}
+                        >
+                          Designed a sophisticated multi-tiered Discord bot
+                          using Python and JavaScript to provide instant updates
+                          on sneaker and clothing releases, including essential
+                          details like location and timing. Optimized the
+                          software platform by integrating new features that led
+                          to an increase in monthly subscriptions and improved
+                          customer retention through valuable user insights.
+                          Facilitated pull requests, code reviews, and stress
+                          testing to ensure the quality of data throughout the
+                          Software Development Life Cycle.
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              )}
+
               {/*Fourth Card*/}
               <Card
                 sx={(theme) => ({
-                  marginTop: theme.spacing(4),
+                  marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
-                  transition: "0.3s",
+                  transition: "all 0.3s ease-in-out",
                   boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
@@ -1937,8 +2398,14 @@ export default function HomePage() {
                     paddingTop: theme.spacing(2),
                   },
                   width: "73%",
-                  height: "250px",
+                  height: "300px",
+                  cursor: "pointer",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
+                  },
                 })}
+                onClick={() => setOpenCardId("card8")}
               >
                 <Box
                   sx={(theme) => ({
@@ -1958,13 +2425,13 @@ export default function HomePage() {
                   <Box>
                     <Image
                       src={fyllan_logo}
-                      alt="Smart Study Logo"
-                      fill
-                      sizes="(max-width: 768px) 88vw, 300px"
+                      alt="Fyllan Logo"
                       style={{
                         objectFit: "cover",
-                        borderRadius: "16px",
+                        borderRadius: "200px",
                         background: "transparent",
+                        width: "300px",
+                        height: "300px",
                       }}
                     />
                   </Box>
@@ -2010,6 +2477,152 @@ export default function HomePage() {
                   </Typography>
                 </CardContent>
               </Card>
+
+              {openCardId === "card8" && (
+                <div
+                  style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: `rgba(0, 0, 0, ${isOpen ? 0.7 : 0})`,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    zIndex: 1000,
+                    opacity: 0,
+                    animation: "fadeIn 0.3s ease-in-out forwards",
+                  }}
+                  onClick={() => setOpenCardId(null)}
+                >
+                  <style jsx global>{`
+                    @keyframes fadeIn {
+                      from {
+                        opacity: 0;
+                      }
+                      to {
+                        opacity: 1;
+                      }
+                    }
+                    @keyframes slideIn {
+                      from {
+                        opacity: 0;
+                        transform: scale(0.9);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: scale(1);
+                      }
+                    }
+                  `}</style>
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      opacity: 0,
+                      animation: "slideIn 0.3s ease-out forwards",
+                      width: "90%",
+                      maxWidth: "1200px",
+                    }}
+                  >
+                    <Card
+                      sx={(theme) => ({
+                        marginTop: 0,
+                        borderRadius: theme.spacing(2),
+                        boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.3)",
+                        position: "relative",
+                        overflow: "initial",
+                        background: "#151312",
+                        color: "white",
+                        border: "1px solid white",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        paddingBottom: theme.spacing(2),
+                        [theme.breakpoints.up("md")]: {
+                          flexDirection: "row",
+                          paddingTop: theme.spacing(2),
+                        },
+                        width: "100%",
+                        height: "400px",
+                      })}
+                    >
+                      <Box
+                        sx={(theme) => ({
+                          width: "88%",
+                          maxWidth: 400,
+                          position: "relative",
+                          marginTop: theme.spacing(-3),
+                          aspectRatio: "1/1",
+                          [theme.breakpoints.up("md")]: {
+                            width: 400,
+                            marginLeft: theme.spacing(-3),
+                            marginTop: 0,
+                            flexShrink: 0,
+                          },
+                        })}
+                      >
+                        <Box>
+                          <Image
+                            src={fyllan_logo}
+                            alt="Fyllan Logo"
+                            style={{
+                              objectFit: "cover",
+                              borderRadius: "200px",
+                              background: "transparent",
+                              width: "400px",
+                              height: "400px",
+                            }}
+                          />
+                        </Box>
+                      </Box>
+                      <CardContent>
+                        <Typography
+                          variant="overline"
+                          sx={{
+                            letterSpacing: "1px",
+                            fontSize: 14,
+                            marginBottom: "0.875em",
+                            display: "inline-block",
+                          }}
+                        >
+                          Oct 2020 - Feb 2021 | Fyllan
+                        </Typography>
+                        <Typography
+                          variant="h5"
+                          sx={{
+                            fontWeight: "bold",
+                            marginBottom: "0.35em",
+                            fontFamily: "Kanit",
+                            fontSize: "2rem",
+                          }}
+                        >
+                          Web Development Intern
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginBottom: 2,
+                            letterSpacing: "0.00938em",
+                            fontFamily: "Kanit",
+                            fontSize: "1.1rem",
+                          }}
+                        >
+                          Created an interactive reservation system with
+                          real-time availability updates using JavaScript and
+                          AJAX, leading to a 30% increase in online bookings for
+                          Fyllan restaurants. Integrated third-party APIs using
+                          JavaScript&apos;s fetch API, enhancing website
+                          functionality with features like real-time restaurant
+                          updates and social media feeds. Collaborated with
+                          senior developers to design and implement interfaces,
+                          merging feedback to refine the UI/UX.
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              )}
             </Box>
 
             {/*Fourth Section - Tech Stack*/}
