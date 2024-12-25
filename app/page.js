@@ -5,12 +5,9 @@ import {
   Typography,
   Paper,
   Container,
-  Avatar,
-  CardMedia,
   Card,
   CardContent,
   Button,
-  CardHeader,
 } from "@mui/material";
 
 import Grid from "@mui/material/Grid2";
@@ -64,7 +61,6 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import EmailIcon from "@mui/icons-material/Email";
 import Link from "next/link";
-import Modal from "@mui/material";
 
 import MouseTrail from "./components/mousetrail";
 
