@@ -604,7 +604,7 @@ export default function HomePage() {
                         display: "inline-block",
                       }}
                     >
-                      CURRENT PROJECT | JavaScript, Next.JS, React, MUI, OpenAI,
+                      CURRENT PROJECT | JavaScript, Next, React, MUI, OpenAI,
                       Firebase
                     </Typography>
                     <Typography
