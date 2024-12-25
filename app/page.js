@@ -51,6 +51,7 @@ import nycddc_logo from "../public/nycddc_logo.png";
 import fyllan_logo from "../public/fyllan_logo.png";
 import trademark_logo from "../public/trademark_logo.png";
 import doris_logo from "../public/doris_logo.png";
+import mapcs from "../public/mapcs.png";
 
 {
   /*Icons for Fixed Column on Left*/
@@ -60,7 +61,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import EmailIcon from "@mui/icons-material/Email";
 import Link from "next/link";
-import { borderRadius, height } from "@mui/system";
+
+import MouseTrail from "./components/mousetrail";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -296,6 +298,7 @@ export default function HomePage() {
                   borderRadius: "10px",
                   marginTop: "100px",
                   marginLeft: "150px",
+                  border: "2px solid #fff",
                 }}
               >
                 <Image
@@ -415,18 +418,7 @@ export default function HomePage() {
                   textTransform: "uppercase",
                 }}
               >
-                Software
-              </Typography>
-
-              <Typography
-                variant="h1"
-                sx={{
-                  fontFamily: "Kanit",
-                  fontWeight: 900,
-                  textTransform: "uppercase",
-                }}
-              >
-                Engineer
+                Software Engineer
               </Typography>
 
               <Typography
@@ -493,7 +485,7 @@ export default function HomePage() {
 
               <Card
                 sx={(theme) => ({
-                  marginTop: theme.spacing(4),
+                  marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
                   transition: "0.3s",
                   boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
@@ -948,7 +940,7 @@ export default function HomePage() {
               {/*First Card*/}
               <Card
                 sx={(theme) => ({
-                  marginTop: theme.spacing(4),
+                  marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
                   transition: "0.3s",
                   boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
@@ -1027,7 +1019,15 @@ export default function HomePage() {
                       fontFamily: "Kanit",
                     }}
                   >
-                    Filler text here.
+                    Developed a Python-based website monitoring system using
+                    Docker and Azure, increasing uptime by 15% and reducing
+                    false positives by 40% while enabling proactive issue
+                    resolution for critical web services. Created a custom
+                    script to compress PDF files efficiently, reducing file
+                    sizes by 60% and improving performance for web-based
+                    document delivery systems. Led a redesign of the internal
+                    company website, focusing on user-centric design principles
+                    to create a more efficient and visually appealing platform.
                   </Typography>
                 </CardContent>
               </Card>
@@ -1115,7 +1115,16 @@ export default function HomePage() {
                       fontFamily: "Kanit",
                     }}
                   >
-                    Filler text here.
+                    Developed and implemented a Python-based Hash File system to
+                    efficiently identify Laptop device IDs, reducing
+                    vulnerability assessment time and improving overall
+                    responses. Managed a cross-functional team in executing a
+                    major software system rollout, device updates and software
+                    installations; resulting in a 25% reduction in downtime. Led
+                    the identification of vulnerabilities, performed repairs,
+                    updated hundreds of devices, and deployed new software,
+                    alongside creating user and support accounts on laptops and
+                    mobile devices.
                   </Typography>
                 </CardContent>
               </Card>
@@ -1202,7 +1211,15 @@ export default function HomePage() {
                       fontFamily: "Kanit",
                     }}
                   >
-                    Filler text here.
+                    Designed a sophisticated multi-tiered Discord bot using
+                    Python and JavaScript to provide instant updates on sneaker
+                    and clothing releases, including essential details like
+                    location and timing. Optimized the software platform by
+                    integrating new features that led to an increase in monthly
+                    subscriptions and improved customer retention through
+                    valuable user insights. Facilitated pull requests, code
+                    reviews, and stress testing to ensure the quality of data
+                    throughout the Software Development Life Cycle.
                   </Typography>
                 </CardContent>
               </Card>
@@ -1289,7 +1306,14 @@ export default function HomePage() {
                       fontFamily: "Kanit",
                     }}
                   >
-                    Filler text here.
+                    Created an interactive reservation system with real-time
+                    availability updates using JavaScript and AJAX, leading to a
+                    30% increase in online bookings for Fyllan restaurants.
+                    Integrated third-party APIs using JavaScript&apos;s fetch
+                    API, enhancing website functionality with features like
+                    real-time restaurant updates and social media feeds.
+                    Collaborated with senior developers to design and implement
+                    interfaces, merging feedback to refine the UI/UX.
                   </Typography>
                 </CardContent>
               </Card>
@@ -1329,7 +1353,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_study_logo}
+                        cover={mapcs}
                         logo={html_logo}
                         title={"HTML"}
                       />
@@ -1342,7 +1366,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={css_logo}
                         title={"CSS"}
                       />
@@ -1355,7 +1379,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={javascript_logo}
                         title={"JavaScript"}
                       />
@@ -1368,7 +1392,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={nextjs_logo}
                         title={"Next.js"}
                       />
@@ -1381,7 +1405,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={react_logo}
                         title={"React"}
                       />
@@ -1394,7 +1418,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={mui_logo}
                         title={"MUI"}
                       />
@@ -1407,7 +1431,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={python_logo}
                         title={"Python"}
                       />
@@ -1420,7 +1444,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={flask_logo}
                         title={"Flask"}
                       />
@@ -1433,7 +1457,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={docker_logo}
                         title={"Docker"}
                       />
@@ -1446,7 +1470,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={openai_logo}
                         title={"OpenAI"}
                       />
@@ -1459,7 +1483,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={firebase_logo}
                         title={"Firebase"}
                       />
@@ -1472,7 +1496,7 @@ export default function HomePage() {
                       }}
                     >
                       <ProjectCard
-                        cover={smart_translate_logo}
+                        cover={mapcs}
                         logo={mysql_logo}
                         title={"MySQL"}
                       />
