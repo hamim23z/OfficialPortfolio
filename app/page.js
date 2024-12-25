@@ -547,8 +547,8 @@ export default function HomePage() {
                       flexDirection: "row",
                       paddingTop: theme.spacing(2),
                     },
-                    width: "73%",
-                    height: "300px",
+                    width: "83%",
+                    height: "320px",
                     cursor: "pointer",
                     "&:hover": {
                       transform: "translateY(-4px)",
@@ -842,8 +842,8 @@ export default function HomePage() {
                     flexDirection: "row",
                     paddingTop: theme.spacing(2),
                   },
-                  width: "73%",
-                  height: "300px",
+                  width: "83%",
+                  height: "320px",
                   cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-4px)",
@@ -867,19 +867,27 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <Box>
-                    <Image
-                      src={smart_translate_logo}
-                      alt="Smart Study Logo"
+                  <Box
                       style={{
-                        objectFit: "cover",
-                        borderRadius: "200px",
-                        background: "transparent",
-                        width: "300px",
-                        height: "300px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "100%", 
+                        height: "100%",
                       }}
-                    />
-                  </Box>
+                    >
+                      <Image
+                        src={smart_translate_logo}
+                        alt="Smart Translate Logo"
+                        style={{
+                          objectFit: "cover",
+                          borderRadius: "150px",
+                          background: "transparent",
+                          width: "200px",
+                          height: "200px",
+                        }}
+                      />
+                    </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -1129,8 +1137,8 @@ export default function HomePage() {
                     flexDirection: "row",
                     paddingTop: theme.spacing(2),
                   },
-                  width: "73%",
-                  height: "300px",
+                  width: "83%",
+                  height: "320px",
                   cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-4px)",
@@ -1154,19 +1162,27 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <Box>
-                    <Image
-                      src={chronicleai_logo}
-                      alt="Chronicle AI Logo"
+                  <Box
                       style={{
-                        objectFit: "cover",
-                        borderRadius: "200px",
-                        background: "transparent",
-                        width: "300px",
-                        height: "300px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "100%", 
+                        height: "100%",
                       }}
-                    />
-                  </Box>
+                    >
+                      <Image
+                        src={chronicleai_logo}
+                        alt="ChronicleAI Logo"
+                        style={{
+                          objectFit: "cover",
+                          borderRadius: "150px",
+                          background: "transparent",
+                          width: "200px",
+                          height: "200px",
+                        }}
+                      />
+                    </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -1413,8 +1429,8 @@ export default function HomePage() {
                     flexDirection: "row",
                     paddingTop: theme.spacing(2),
                   },
-                  width: "73%",
-                  height: "300px",
+                  width: "83%",
+                  height: "320px",
                   cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-4px)",
@@ -1438,19 +1454,27 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <Box>
-                    <Image
-                      src={blizzardbot_logo}
-                      alt="Blizzard Bot Logo"
+                  <Box
                       style={{
-                        objectFit: "cover",
-                        borderRadius: "200px",
-                        background: "transparent",
-                        width: "300px",
-                        height: "300px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "100%", 
+                        height: "100%",
                       }}
-                    />
-                  </Box>
+                    >
+                      <Image
+                        src={blizzardbot_logo}
+                        alt="Blizzard Bot Logo"
+                        style={{
+                          objectFit: "cover",
+                          borderRadius: "150px",
+                          background: "transparent",
+                          width: "200px",
+                          height: "200px",
+                        }}
+                      />
+                    </Box>
                 </Box>
                 <CardContent>
                   <Typography
