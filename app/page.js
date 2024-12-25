@@ -444,14 +444,14 @@ export default function HomePage() {
                 Hey! I&apos;m Hamim Choudhury, a Computer Science student at The
                 City College of New York. My journey of coding started in middle
                 school, where I took a computer course and used MIT&apos;s
-                Scratch as my first language. <br></br> <br></br>And that is how my passion for
-                coding began. I started off by building simple websites and I
-                explored how to code myself. I now code on a regular basis,
-                learning a multitude of languages and using them very often. <br></br> <br></br> I
-                started off as a frontend engineer only, but have now become a
-                full-stack engineer. I love to build projects that can solve
-                real-world problems and ones that people will use on a regular
-                basis.
+                Scratch as my first language. <br></br> <br></br>And that is how
+                my passion for coding began. I started off by building simple
+                websites and I explored how to code myself. I now code on a
+                regular basis, learning a multitude of languages and using them
+                very often. <br></br> <br></br> I started off as a frontend
+                engineer only, but have now become a full-stack engineer. I love
+                to build projects that can solve real-world problems and ones
+                that people will use on a regular basis.
               </Typography>
 
               <Box mt={4}>
@@ -505,7 +505,7 @@ export default function HomePage() {
             </Box>
 
             {/*Second Section on the Right Side*/}
-            <Box>
+            <Box sx={{ marginTop: "20px", paddingX: { xs: "10px", md: "50px" } }}>
               <motion.div
                 id="projects"
                 initial={{ opacity: 0 }}
@@ -572,16 +572,24 @@ export default function HomePage() {
                       },
                     })}
                   >
-                    <Box>
+                    <Box
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "100%", 
+                        height: "100%",
+                      }}
+                    >
                       <Image
                         src={smart_study_logo}
                         alt="Smart Study Logo"
                         style={{
                           objectFit: "cover",
-                          borderRadius: "200px",
+                          borderRadius: "150px",
                           background: "transparent",
-                          width: "300px",
-                          height: "300px",
+                          width: "200px",
+                          height: "200px",
                         }}
                       />
                     </Box>
