@@ -2746,89 +2746,92 @@ export default function HomePage() {
 
             {/*Fourth Section - Tech Stack*/}
             <Box
-              sx={{
-                marginTop: "20px",
-                paddingX: { xs: "10px", md: "50px" },
-              }}
-            >
-              <motion.div
-                id="techStack"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Typography
-                  variant="h1"
-                  sx={{
-                    fontFamily: "Kanit",
-                    fontWeight: 900,
-                    textTransform: "uppercase",
-                  }}
-                >
-                  <br />
-                  Tech Stack
-                </Typography>
-              </motion.div>
+  sx={{
+    marginTop: "20px",
+    paddingX: { xs: "10px", md: "50px" },
+  }}
+>
+  <motion.div
+    id="techStack"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}
+  >
+    <Typography
+      variant="h1"
+      sx={{
+        fontFamily: "Kanit",
+        fontWeight: 900,
+        textTransform: "uppercase",
+        marginLeft: { xs: "0", md: "10px" }, // Matches card alignment on larger screens
+      }}
+    >
+      <br />
+      Tech Stack
+    </Typography>
+  </motion.div>
 
-              <br />
-              <br />
+  <br />
+  <br />
 
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  paddingTop: "20px",
-                  paddingBottom: "100px",
-                }}
-              >
-                <Grid
-                  container
-                  spacing={2}
-                  sx={{
-                    maxWidth: "1000px",
-                    justifyContent: "center",
-                  }}
-                >
-                  {[
-                    { logo: html_logo, title: "HTML" },
-                    { logo: css_logo, title: "CSS" },
-                    { logo: javascript_logo, title: "JavaScript" },
-                    { logo: nextjs_logo, title: "Next.js" },
-                    { logo: react_logo, title: "React" },
-                    { logo: mui_logo, title: "MUI" },
-                    { logo: python_logo, title: "Python" },
-                    { logo: flask_logo, title: "Flask" },
-                    { logo: docker_logo, title: "Docker" },
-                    { logo: openai_logo, title: "OpenAI" },
-                    { logo: firebase_logo, title: "Firebase" },
-                    { logo: mysql_logo, title: "MySQL" },
-                  ].map((item, index) => (
-                    <Grid
-                      key={index}
-                      item
-                      xs={12}
-                      sm={6}
-                      md={4}
-                      lg={3}
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={item.logo}
-                        title={item.title}
-                        sx={{
-                          maxWidth: "200px",
-                          width: "100%",
-                        }}
-                      />
-                    </Grid>
-                  ))}
-                </Grid>
-              </Box>
-            </Box>
+  <Box
+    sx={{
+      display: "flex",
+      flexDirection: "column",
+      paddingTop: "20px",
+      paddingBottom: "100px",
+    }}
+  >
+    <Grid
+      container
+      spacing={2}
+      sx={{
+        maxWidth: "1000px",
+        justifyContent: "flex-start", // Aligns cards to the left
+        marginLeft: { xs: "0", md: "10px" }, // Matches text alignment for consistency
+      }}
+    >
+      {[
+        { logo: html_logo, title: "HTML" },
+        { logo: css_logo, title: "CSS" },
+        { logo: javascript_logo, title: "JavaScript" },
+        { logo: nextjs_logo, title: "Next.js" },
+        { logo: react_logo, title: "React" },
+        { logo: mui_logo, title: "MUI" },
+        { logo: python_logo, title: "Python" },
+        { logo: flask_logo, title: "Flask" },
+        { logo: docker_logo, title: "Docker" },
+        { logo: openai_logo, title: "OpenAI" },
+        { logo: firebase_logo, title: "Firebase" },
+        { logo: mysql_logo, title: "MySQL" },
+      ].map((item, index) => (
+        <Grid
+          key={index}
+          item
+          xs={12}
+          sm={6}
+          md={4} // 3 cards per row on medium-sized screens (laptops)
+          lg={3} // 4 cards per row on large screens
+          sx={{
+            display: "flex",
+            justifyContent: "flex-start", // Ensures left alignment
+          }}
+        >
+          <ProjectCard
+            cover={mapcs}
+            logo={item.logo}
+            title={item.title}
+            sx={{
+              maxWidth: "200px",
+              width: "100%",
+            }}
+          />
+        </Grid>
+      ))}
+    </Grid>
+  </Box>
+</Box>
+
           </Grid>
         </Grid>
       </Box>
