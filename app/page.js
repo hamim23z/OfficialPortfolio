@@ -2741,8 +2741,7 @@ export default function HomePage() {
             </Box>
 
             {/*Fourth Section - Tech Stack*/}
-            {/* Fourth Section - Tech Stack */}
-<Box
+            <Box
   sx={{
     marginTop: "20px",
     paddingX: { xs: "10px", md: "50px" },
@@ -2805,11 +2804,13 @@ export default function HomePage() {
           item
           xs={12}
           sm={6}
-          md={4} // Allocates one-third of the row for medium screens (laptops)
-          lg={3} // Retains four cards per row for larger screens
+          md={4} // Allocates one-third of the row for medium screens
           sx={{
             display: "flex",
             justifyContent: "flex-start",
+            "@media (min-width: 1024px) and (max-width: 1440px)": {
+              flexBasis: "30%", // Forces 3 cards per row for laptop screens
+            },
           }}
         >
           <ProjectCard
@@ -2817,7 +2818,7 @@ export default function HomePage() {
             logo={item.logo}
             title={item.title}
             sx={{
-              maxWidth: { xs: "150px", sm: "180px", md: "160px" }, // Smaller cards for laptops
+              maxWidth: { xs: "150px", sm: "180px", md: "160px" },
               width: "100%",
             }}
           />
