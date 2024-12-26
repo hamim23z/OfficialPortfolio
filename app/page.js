@@ -62,7 +62,6 @@ import FileCopyIcon from "@mui/icons-material/FileCopy";
 import EmailIcon from "@mui/icons-material/Email";
 import Link from "next/link";
 
-
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
   ...theme.typography.body2,
@@ -449,11 +448,11 @@ export default function HomePage() {
                   container
                   spacing={4}
                   sx={{
-                    maxWidth: "800px", 
+                    maxWidth: "800px",
                     marginX: "0",
                     flexDirection: { xs: "column", md: "row" },
-                    alignItems: { xs: "center", md: "flex-start" }, 
-                    justifyContent: "space-between", 
+                    alignItems: { xs: "center", md: "flex-start" },
+                    justifyContent: "space-between",
                   }}
                 >
                   <Grid
@@ -479,7 +478,7 @@ export default function HomePage() {
                     xs={12}
                     md={6}
                     sx={{
-                      width: { xs: "100%", md: "48%" }
+                      width: { xs: "100%", md: "48%" },
                     }}
                   >
                     <ProjectCard
@@ -2063,15 +2062,14 @@ export default function HomePage() {
                     }}
                   >
                     Developed and implemented a Python-based Hash File to
-                    efficiently identify device IDs, reducing
-                    vulnerability assessment time and improving overall
-                    responses. Managed a cross-functional team in executing a
-                    major software system rollout and device updates resulting 
-                    in a 25% reduction in downtime. Led
-                    the identification of vulnerabilities, repairs,
-                    updating hundreds of devices, and deploying new software,
-                    alongside creating user and support accounts on laptops and
-                    mobile devices.
+                    efficiently identify device IDs, reducing vulnerability
+                    assessment time and improving overall responses. Managed a
+                    cross-functional team in executing a major software system
+                    rollout and device updates resulting in a 25% reduction in
+                    downtime. Led the identification of vulnerabilities,
+                    repairs, updating hundreds of devices, and deploying new
+                    software, alongside creating user and support accounts on
+                    laptops and mobile devices.
                   </Typography>
                 </CardContent>
               </Card>
@@ -2742,10 +2740,9 @@ export default function HomePage() {
               )}
             </Box>
 
-
-
             {/*Fourth Section - Tech Stack*/}
-            <Box
+            {/* Fourth Section - Tech Stack */}
+<Box
   sx={{
     marginTop: "20px",
     paddingX: { xs: "10px", md: "50px" },
@@ -2808,11 +2805,11 @@ export default function HomePage() {
           item
           xs={12}
           sm={6}
-          md={4} // 3 cards per row on medium-sized screens (laptops)
-          lg={3} // 4 cards per row on large screens
+          md={4} // Allocates one-third of the row for medium screens (laptops)
+          lg={3} // Retains four cards per row for larger screens
           sx={{
             display: "flex",
-            justifyContent: "flex-start", // Ensures left alignment
+            justifyContent: "flex-start",
           }}
         >
           <ProjectCard
@@ -2820,7 +2817,7 @@ export default function HomePage() {
             logo={item.logo}
             title={item.title}
             sx={{
-              maxWidth: "200px",
+              maxWidth: { xs: "150px", sm: "180px", md: "160px" }, // Smaller cards for laptops
               width: "100%",
             }}
           />
