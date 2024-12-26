@@ -2062,14 +2062,14 @@ export default function HomePage() {
                       fontFamily: "Kanit",
                     }}
                   >
-                    Developed and implemented a Python-based Hash File system to
-                    efficiently identify Laptop device IDs, reducing
+                    Developed and implemented a Python-based Hash File to
+                    efficiently identify device IDs, reducing
                     vulnerability assessment time and improving overall
                     responses. Managed a cross-functional team in executing a
-                    major software system rollout, device updates and software
-                    installations; resulting in a 25% reduction in downtime. Led
-                    the identification of vulnerabilities, performed repairs,
-                    updated hundreds of devices, and deployed new software,
+                    major software system rollout and device updates resulting 
+                    in a 25% reduction in downtime. Led
+                    the identification of vulnerabilities, repairs,
+                    updating hundreds of devices, and deploying new software,
                     alongside creating user and support accounts on laptops and
                     mobile devices.
                   </Typography>
