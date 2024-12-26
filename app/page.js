@@ -2739,98 +2739,101 @@ export default function HomePage() {
                 </div>
               )}
             </Box>
-
-            {/*Fourth Section - Tech Stack*/}
-            <Box
-  sx={{
-    marginTop: "20px",
-    paddingX: { xs: "10px", md: "50px" },
-  }}
->
-  <motion.div
-    id="techStack"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.5 }}
-  >
-    <Typography
-      variant="h1"
-      sx={{
-        fontFamily: "Kanit",
-        fontWeight: 900,
-        textTransform: "uppercase",
-      }}
-    >
-      <br />
-      Tech Stack
-    </Typography>
-  </motion.div>
-
-  <br />
-  <br />
-
-  <Box
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      paddingTop: "20px",
-      paddingBottom: "100px",
-    }}
-  >
-    <Grid
-      container
-      spacing={2} // Spacing between items
-      sx={{
-        maxWidth: "1000px",
-        justifyContent: "flex-start", // Aligns cards to the left
-      }}
-    >
-      {[
-        { logo: html_logo, title: "HTML" },
-        { logo: css_logo, title: "CSS" },
-        { logo: javascript_logo, title: "JavaScript" },
-        { logo: nextjs_logo, title: "Next.js" },
-        { logo: react_logo, title: "React" },
-        { logo: mui_logo, title: "MUI" },
-        { logo: python_logo, title: "Python" },
-        { logo: flask_logo, title: "Flask" },
-        { logo: docker_logo, title: "Docker" },
-        { logo: openai_logo, title: "OpenAI" },
-        { logo: firebase_logo, title: "Firebase" },
-        { logo: mysql_logo, title: "MySQL" },
-      ].map((item, index) => (
-        <Grid
-          key={index}
-          item
-          xs={12}
-          sm={6}
-          md={4} // Default three cards per row for medium screens
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            "@media (min-width: 1024px) and (max-width: 1440px)": {
-              flex: "1 0 30%", // Forces three cards per row
-              maxWidth: "30%", // Ensures exact width
-            },
-          }}
-        >
-          <ProjectCard
-            cover={mapcs}
-            logo={item.logo}
-            title={item.title}
-            sx={{
-              maxWidth: "120px", // Adjust size as needed
-              width: "100%",
-            }}
-          />
-        </Grid>
-      ))}
-    </Grid>
-  </Box>
-</Box>
-
           </Grid>
         </Grid>
+
+        <Box
+          sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+        >
+          {/* Tech Stack Section - Outside the Main Grid */}
+          <Box
+            sx={{
+              width: "100%",
+              paddingX: { xs: "10px", md: "50px" },
+              paddingY: "40px",
+            }}
+          >
+            <motion.div
+              id="techStack"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Typography
+                variant="h1"
+                sx={{
+                  fontFamily: "Kanit",
+                  fontWeight: 900,
+                  textTransform: "uppercase",
+                  textAlign: "center",
+                }}
+              >
+                <br />
+                Tech Stack
+              </Typography>
+            </motion.div>
+
+            <br />
+            <br />
+
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                paddingTop: "20px",
+                paddingBottom: "100px",
+              }}
+            >
+              <Grid
+                container
+                spacing={2}
+                sx={{
+                  maxWidth: "1200px",
+                  justifyContent: "center",
+                }}
+              >
+                {[
+                  { logo: html_logo, title: "HTML" },
+                  { logo: css_logo, title: "CSS" },
+                  { logo: javascript_logo, title: "JavaScript" },
+                  { logo: nextjs_logo, title: "Next.js" },
+                  { logo: react_logo, title: "React" },
+                  { logo: mui_logo, title: "MUI" },
+                  { logo: python_logo, title: "Python" },
+                  { logo: flask_logo, title: "Flask" },
+                  { logo: docker_logo, title: "Docker" },
+                  { logo: openai_logo, title: "OpenAI" },
+                  { logo: firebase_logo, title: "Firebase" },
+                  { logo: mysql_logo, title: "MySQL" },
+                ].map((item, index) => (
+                  <Grid
+                    key={index}
+                    item
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    lg={3}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <ProjectCard
+                      cover={mapcs}
+                      logo={item.logo}
+                      title={item.title}
+                      sx={{
+                        maxWidth: "200px",
+                        width: "100%",
+                      }}
+                    />
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </>
   );
