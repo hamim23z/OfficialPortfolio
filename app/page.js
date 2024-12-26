@@ -15,7 +15,7 @@ import { styled } from "@mui/material/styles";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Tooltip from "@mui/material/Tooltip";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 {
@@ -62,7 +62,6 @@ import FileCopyIcon from "@mui/icons-material/FileCopy";
 import EmailIcon from "@mui/icons-material/Email";
 import Link from "next/link";
 
-import MouseTrail from "./components/mousetrail";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -102,7 +101,7 @@ export default function HomePage() {
     "&:hover": {
       "&:before": {
         bottom: -6,
-      }
+      },
     },
   }));
 
@@ -413,7 +412,7 @@ export default function HomePage() {
                   textTransform: "uppercase",
                   fontSize: { xs: "2rem", md: "3rem" },
                   textAlign: "left",
-                  maxWidth: "800px", // Ensure alignment
+                  maxWidth: "800px",
                 }}
               >
                 Software Engineer
@@ -428,8 +427,8 @@ export default function HomePage() {
                   fontSize: { xs: "0.9rem", md: "1.2rem" },
                   lineHeight: { xs: "1.5", md: "1.8" },
                   textAlign: "left",
-                  maxWidth: "800px", // Align with the container
-                  marginTop: "20px", // Add space below the heading
+                  maxWidth: "800px",
+                  marginTop: "20px",
                 }}
               >
                 Hey! I&apos;m Hamim Choudhury, a Computer Science student at The
@@ -450,11 +449,11 @@ export default function HomePage() {
                   container
                   spacing={4}
                   sx={{
-                    maxWidth: "800px", // Matches the text width for alignment
-                    marginX: "0", // Left align the container
+                    maxWidth: "800px", 
+                    marginX: "0",
                     flexDirection: { xs: "column", md: "row" },
-                    alignItems: { xs: "center", md: "flex-start" }, // Align cards properly
-                    justifyContent: "space-between", // Ensure spacing between cards
+                    alignItems: { xs: "center", md: "flex-start" }, 
+                    justifyContent: "space-between", 
                   }}
                 >
                   <Grid
@@ -462,8 +461,8 @@ export default function HomePage() {
                     xs={12}
                     md={6}
                     sx={{
-                      width: { xs: "100%", md: "48%" }, // Ensure consistent width
-                      marginBottom: { xs: "20px", md: "0" }, // Space between cards on mobile
+                      width: { xs: "100%", md: "48%" },
+                      marginBottom: { xs: "20px", md: "0" },
                     }}
                   >
                     <ProjectCard
@@ -480,7 +479,7 @@ export default function HomePage() {
                     xs={12}
                     md={6}
                     sx={{
-                      width: { xs: "100%", md: "48%" }, // Ensure consistent width
+                      width: { xs: "100%", md: "48%" }
                     }}
                   >
                     <ProjectCard
@@ -496,7 +495,9 @@ export default function HomePage() {
             </Box>
 
             {/*Second Section on the Right Side*/}
-            <Box sx={{ marginTop: "20px", paddingX: { xs: "10px", md: "50px" } }}>
+            <Box
+              sx={{ marginTop: "20px", paddingX: { xs: "10px", md: "50px" } }}
+            >
               <motion.div
                 id="projects"
                 initial={{ opacity: 0 }}
@@ -566,7 +567,7 @@ export default function HomePage() {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        width: "100%", 
+                        width: "100%",
                         height: "100%",
                       }}
                     >
@@ -855,26 +856,26 @@ export default function HomePage() {
                   })}
                 >
                   <Box
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    <Image
+                      src={smart_translate_logo}
+                      alt="Smart Translate Logo"
                       style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "100%", 
-                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "150px",
+                        background: "transparent",
+                        width: "200px",
+                        height: "200px",
                       }}
-                    >
-                      <Image
-                        src={smart_translate_logo}
-                        alt="Smart Translate Logo"
-                        style={{
-                          objectFit: "cover",
-                          borderRadius: "150px",
-                          background: "transparent",
-                          width: "200px",
-                          height: "200px",
-                        }}
-                      />
-                    </Box>
+                    />
+                  </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -1148,26 +1149,26 @@ export default function HomePage() {
                   })}
                 >
                   <Box
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    <Image
+                      src={chronicleai_logo}
+                      alt="ChronicleAI Logo"
                       style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "100%", 
-                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "150px",
+                        background: "transparent",
+                        width: "200px",
+                        height: "200px",
                       }}
-                    >
-                      <Image
-                        src={chronicleai_logo}
-                        alt="ChronicleAI Logo"
-                        style={{
-                          objectFit: "cover",
-                          borderRadius: "150px",
-                          background: "transparent",
-                          width: "200px",
-                          height: "200px",
-                        }}
-                      />
-                    </Box>
+                    />
+                  </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -1438,26 +1439,26 @@ export default function HomePage() {
                   })}
                 >
                   <Box
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    <Image
+                      src={blizzardbot_logo}
+                      alt="Blizzard Bot Logo"
                       style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "100%", 
-                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "150px",
+                        background: "transparent",
+                        width: "200px",
+                        height: "200px",
                       }}
-                    >
-                      <Image
-                        src={blizzardbot_logo}
-                        alt="Blizzard Bot Logo"
-                        style={{
-                          objectFit: "cover",
-                          borderRadius: "150px",
-                          background: "transparent",
-                          width: "200px",
-                          height: "200px",
-                        }}
-                      />
-                    </Box>
+                    />
+                  </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -1685,18 +1686,27 @@ export default function HomePage() {
             </Box>
 
             {/*Third Section on the Right Side*/}
-            <Box sx={{ marginTop: "20px", paddingX: { xs: "10px", md: "50px" } }}>
-              <Typography
-                variant="h1"
-                sx={{
-                  fontFamily: "Kanit",
-                  fontWeight: 900,
-                  textTransform: "uppercase",
-                }}
+            <Box
+              sx={{ marginTop: "20px", paddingX: { xs: "10px", md: "50px" } }}
+            >
+              <motion.div
+                id="experience"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
               >
-                <br></br>
-                Experience
-              </Typography>
+                <Typography
+                  variant="h1"
+                  sx={{
+                    fontFamily: "Kanit",
+                    fontWeight: 900,
+                    textTransform: "uppercase",
+                  }}
+                >
+                  <br></br>
+                  Experience
+                </Typography>
+              </motion.div>
 
               {/*First Card*/}
               <Card
@@ -1743,26 +1753,26 @@ export default function HomePage() {
                   })}
                 >
                   <Box
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    <Image
+                      src={doris_logo}
+                      alt="DORIS Logo"
                       style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "100%", 
-                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "150px",
+                        background: "transparent",
+                        width: "200px",
+                        height: "200px",
                       }}
-                    >
-                      <Image
-                        src={doris_logo}
-                        alt="DORIS Logo"
-                        style={{
-                          objectFit: "cover",
-                          borderRadius: "150px",
-                          background: "transparent",
-                          width: "200px",
-                          height: "200px",
-                        }}
-                      />
-                    </Box>
+                    />
+                  </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -2000,26 +2010,26 @@ export default function HomePage() {
                   })}
                 >
                   <Box
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    <Image
+                      src={nycddc_logo}
+                      alt="NYC DDC Logo"
                       style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "100%", 
-                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "150px",
+                        background: "transparent",
+                        width: "200px",
+                        height: "200px",
                       }}
-                    >
-                      <Image
-                        src={nycddc_logo}
-                        alt="NYC DDC Logo"
-                        style={{
-                          objectFit: "cover",
-                          borderRadius: "150px",
-                          background: "transparent",
-                          width: "200px",
-                          height: "200px",
-                        }}
-                      />
-                    </Box>
+                    />
+                  </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -2262,26 +2272,26 @@ export default function HomePage() {
                   })}
                 >
                   <Box
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    <Image
+                      src={trademark_logo}
+                      alt="Trademark Logo"
                       style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "100%", 
-                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "150px",
+                        background: "transparent",
+                        width: "200px",
+                        height: "200px",
                       }}
-                    >
-                      <Image
-                        src={trademark_logo}
-                        alt="Trademark Logo"
-                        style={{
-                          objectFit: "cover",
-                          borderRadius: "150px",
-                          background: "transparent",
-                          width: "200px",
-                          height: "200px",
-                        }}
-                      />
-                    </Box>
+                    />
+                  </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -2520,26 +2530,26 @@ export default function HomePage() {
                   })}
                 >
                   <Box
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    <Image
+                      src={fyllan_logo}
+                      alt="Fyllan Logo"
                       style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "100%", 
-                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "150px",
+                        background: "transparent",
+                        width: "200px",
+                        height: "200px",
                       }}
-                    >
-                      <Image
-                        src={fyllan_logo}
-                        alt="Fyllan Logo"
-                        style={{
-                          objectFit: "cover",
-                          borderRadius: "150px",
-                          background: "transparent",
-                          width: "200px",
-                          height: "200px",
-                        }}
-                      />
-                    </Box>
+                    />
+                  </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -2732,19 +2742,33 @@ export default function HomePage() {
               )}
             </Box>
 
+
+
             {/*Fourth Section - Tech Stack*/}
-            <Box sx={{ marginTop: "20px", paddingX: { xs: "10px", md: "50px" } }}>
-              <Typography
-                variant="h1"
-                sx={{
-                  fontFamily: "Kanit",
-                  fontWeight: 900,
-                  textTransform: "uppercase",
-                }}
+            <Box
+              sx={{
+                marginTop: "20px",
+                paddingX: { xs: "10px", md: "50px" },
+              }}
+            >
+              <motion.div
+                id="techStack"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
               >
-                <br />
-                Tech Stack
-              </Typography>
+                <Typography
+                  variant="h1"
+                  sx={{
+                    fontFamily: "Kanit",
+                    fontWeight: 900,
+                    textTransform: "uppercase",
+                  }}
+                >
+                  <br />
+                  Tech Stack
+                </Typography>
+              </motion.div>
 
               <br />
               <br />
@@ -2752,190 +2776,57 @@ export default function HomePage() {
               <Box
                 sx={{
                   display: "flex",
-                  flexDirection: "row",
+                  flexDirection: "column",
+                  paddingTop: "20px",
                   paddingBottom: "100px",
                 }}
               >
-                <Box mt={4} sx={{ width: "100%" }}>
-                  <Grid
-                    container
-                    spacing={2}
-                    sx={{
-                      width: "100%",
-                      margin: "0 auto",
-                      justifyContent: { xs: "center", md: "space-between" },
-                      flexDirection: { xs: "column", md: "row" },
-                    }}
-                  >
+                <Grid
+                  container
+                  spacing={2}
+                  sx={{
+                    maxWidth: "1000px",
+                    justifyContent: "center",
+                  }}
+                >
+                  {[
+                    { logo: html_logo, title: "HTML" },
+                    { logo: css_logo, title: "CSS" },
+                    { logo: javascript_logo, title: "JavaScript" },
+                    { logo: nextjs_logo, title: "Next.js" },
+                    { logo: react_logo, title: "React" },
+                    { logo: mui_logo, title: "MUI" },
+                    { logo: python_logo, title: "Python" },
+                    { logo: flask_logo, title: "Flask" },
+                    { logo: docker_logo, title: "Docker" },
+                    { logo: openai_logo, title: "OpenAI" },
+                    { logo: firebase_logo, title: "Firebase" },
+                    { logo: mysql_logo, title: "MySQL" },
+                  ].map((item, index) => (
                     <Grid
+                      key={index}
                       item
                       xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
+                      sm={6}
+                      md={4}
+                      lg={3}
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
                     >
                       <ProjectCard
                         cover={mapcs}
-                        logo={html_logo}
-                        title={"HTML"}
+                        logo={item.logo}
+                        title={item.title}
+                        sx={{
+                          maxWidth: "200px",
+                          width: "100%",
+                        }}
                       />
                     </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={css_logo}
-                        title={"CSS"}
-                      />
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={javascript_logo}
-                        title={"JavaScript"}
-                      />
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={nextjs_logo}
-                        title={"Next.js"}
-                      />
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={react_logo}
-                        title={"React"}
-                      />
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={mui_logo}
-                        title={"MUI"}
-                      />
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={python_logo}
-                        title={"Python"}
-                      />
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={flask_logo}
-                        title={"Flask"}
-                      />
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={docker_logo}
-                        title={"Docker"}
-                      />
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={openai_logo}
-                        title={"OpenAI"}
-                      />
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={firebase_logo}
-                        title={"Firebase"}
-                      />
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={12}
-                      sm={4}
-                      md={3}
-                      sx={{ padding: { xs: 1, md: 2 } }}
-                    >
-                      <ProjectCard
-                        cover={mapcs}
-                        logo={mysql_logo}
-                        title={"MySQL"}
-                      />
-                    </Grid>
-                  </Grid>
-                </Box>
+                  ))}
+                </Grid>
               </Box>
             </Box>
           </Grid>
