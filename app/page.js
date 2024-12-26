@@ -102,11 +102,7 @@ export default function HomePage() {
     "&:hover": {
       "&:before": {
         bottom: -6,
-      },
-      "& .MuiAvatar-root": {
-        transform: "scale(1.1)",
-        boxShadow: "0 6px 20px 0 rgba(0,0,0,0.38)",
-      },
+      }
     },
   }));
 
@@ -118,7 +114,6 @@ export default function HomePage() {
     top: 0,
     left: 0,
     zIndex: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.08)",
   }));
 
   const StyledContent = styled("div")(() => ({
@@ -126,7 +121,6 @@ export default function HomePage() {
     zIndex: 1,
     padding: "1rem",
     borderRadius: "1rem",
-    boxShadow: "0 6px 16px 0 rgba(0,0,0,0.5)",
     "&:before": {
       content: '""',
       display: "block",
@@ -147,7 +141,6 @@ export default function HomePage() {
     transition: "0.3s",
     width: 100,
     height: 100,
-    boxShadow: "0 4px 12px 0 rgba(0,0,0,0.24)",
     borderRadius: "1rem",
     position: "relative",
     overflow: "hidden",
@@ -200,7 +193,6 @@ export default function HomePage() {
                   variant="subtitle2"
                   sx={{
                     fontFamily: "Kanit",
-                    color: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
                   {brand}
@@ -212,7 +204,6 @@ export default function HomePage() {
                   sx={{
                     fontFamily: "Kanit",
                     color: "#fff",
-                    backgroundColor: "rgba(255, 255, 255, 0.2)",
                     padding: "0.25rem 0.5rem",
                     borderRadius: "12px",
                   }}
@@ -532,7 +523,6 @@ export default function HomePage() {
                     marginTop: theme.spacing(7),
                     borderRadius: theme.spacing(2),
                     transition: "all 0.3s ease-in-out",
-                    boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                     position: "relative",
                     maxWidth: "100%",
                     overflow: "initial",
@@ -552,7 +542,6 @@ export default function HomePage() {
                     cursor: "pointer",
                     "&:hover": {
                       transform: "translateY(-4px)",
-                      boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
                     },
                   })}
                   onClick={() => setOpenCardId("card1")}
@@ -604,7 +593,7 @@ export default function HomePage() {
                         display: "inline-block",
                       }}
                     >
-                      CURRENT PROJECT | JavaScript, Next, React, MUI, OpenAI,
+                      CURRENT PROJECT | JavaScript, Next.js, React, MUI, OpenAI,
                       Firebase
                     </Typography>
                     <Typography
@@ -827,7 +816,6 @@ export default function HomePage() {
                   marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
                   transition: "all 0.3s ease-in-out",
-                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
@@ -847,7 +835,6 @@ export default function HomePage() {
                   cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-4px)",
-                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
                   },
                 })}
                 onClick={() => setOpenCardId("card2")}
@@ -1122,7 +1109,6 @@ export default function HomePage() {
                   marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
                   transition: "all 0.3s ease-in-out",
-                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
@@ -1142,7 +1128,6 @@ export default function HomePage() {
                   cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-4px)",
-                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
                   },
                 })}
                 onClick={() => setOpenCardId("card3")}
@@ -1414,7 +1399,6 @@ export default function HomePage() {
                   marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
                   transition: "all 0.3s ease-in-out",
-                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
@@ -1434,7 +1418,6 @@ export default function HomePage() {
                   cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-4px)",
-                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
                   },
                 })}
                 onClick={() => setOpenCardId("card4")}
@@ -1702,7 +1685,7 @@ export default function HomePage() {
             </Box>
 
             {/*Third Section on the Right Side*/}
-            <Box>
+            <Box sx={{ marginTop: "20px", paddingX: { xs: "10px", md: "50px" } }}>
               <Typography
                 variant="h1"
                 sx={{
@@ -1719,9 +1702,8 @@ export default function HomePage() {
               <Card
                 sx={(theme) => ({
                   marginTop: theme.spacing(7),
-                  borderRadius: theme.spacing(2),
                   transition: "all 0.3s ease-in-out",
-                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                  borderRadius: theme.spacing(2),
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
@@ -1736,12 +1718,11 @@ export default function HomePage() {
                     flexDirection: "row",
                     paddingTop: theme.spacing(2),
                   },
-                  width: "73%",
-                  height: "300px",
+                  width: "83%",
+                  height: "320px",
                   cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-4px)",
-                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
                   },
                 })}
                 onClick={() => setOpenCardId("card5")}
@@ -1761,19 +1742,27 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <Box>
-                    <Image
-                      src={doris_logo}
-                      alt="DORIS Logo"
+                  <Box
                       style={{
-                        objectFit: "cover",
-                        borderRadius: "200px",
-                        background: "transparent",
-                        width: "300px",
-                        height: "300px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "100%", 
+                        height: "100%",
                       }}
-                    />
-                  </Box>
+                    >
+                      <Image
+                        src={doris_logo}
+                        alt="DORIS Logo"
+                        style={{
+                          objectFit: "cover",
+                          borderRadius: "150px",
+                          background: "transparent",
+                          width: "200px",
+                          height: "200px",
+                        }}
+                      />
+                    </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -1871,7 +1860,6 @@ export default function HomePage() {
                       sx={(theme) => ({
                         marginTop: 0,
                         borderRadius: theme.spacing(2),
-                        boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.3)",
                         position: "relative",
                         overflow: "initial",
                         background: "#151312",
@@ -1973,7 +1961,6 @@ export default function HomePage() {
                   marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
                   transition: "all 0.3s ease-in-out",
-                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
@@ -1988,12 +1975,11 @@ export default function HomePage() {
                     flexDirection: "row",
                     paddingTop: theme.spacing(2),
                   },
-                  width: "73%",
-                  height: "300px",
+                  width: "83%",
+                  height: "320px",
                   cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-4px)",
-                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
                   },
                 })}
                 onClick={() => setOpenCardId("card6")}
@@ -2013,19 +1999,27 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <Box>
-                    <Image
-                      src={nycddc_logo}
-                      alt="DDC Logo"
+                  <Box
                       style={{
-                        objectFit: "cover",
-                        borderRadius: "200px",
-                        background: "transparent",
-                        width: "300px",
-                        height: "300px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "100%", 
+                        height: "100%",
                       }}
-                    />
-                  </Box>
+                    >
+                      <Image
+                        src={nycddc_logo}
+                        alt="NYC DDC Logo"
+                        style={{
+                          objectFit: "cover",
+                          borderRadius: "150px",
+                          background: "transparent",
+                          width: "200px",
+                          height: "200px",
+                        }}
+                      />
+                    </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -2229,7 +2223,6 @@ export default function HomePage() {
                   marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
                   transition: "all 0.3s ease-in-out",
-                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
@@ -2244,12 +2237,11 @@ export default function HomePage() {
                     flexDirection: "row",
                     paddingTop: theme.spacing(2),
                   },
-                  width: "73%",
-                  height: "300px",
+                  width: "83%",
+                  height: "320px",
                   cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-4px)",
-                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
                   },
                 })}
                 onClick={() => setOpenCardId("card7")}
@@ -2269,19 +2261,27 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <Box>
-                    <Image
-                      src={trademark_logo}
-                      alt="TM Logo"
+                  <Box
                       style={{
-                        objectFit: "cover",
-                        borderRadius: "200px",
-                        background: "transparent",
-                        width: "300px",
-                        height: "300px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "100%", 
+                        height: "100%",
                       }}
-                    />
-                  </Box>
+                    >
+                      <Image
+                        src={trademark_logo}
+                        alt="Trademark Logo"
+                        style={{
+                          objectFit: "cover",
+                          borderRadius: "150px",
+                          background: "transparent",
+                          width: "200px",
+                          height: "200px",
+                        }}
+                      />
+                    </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -2481,7 +2481,6 @@ export default function HomePage() {
                   marginTop: theme.spacing(7),
                   borderRadius: theme.spacing(2),
                   transition: "all 0.3s ease-in-out",
-                  boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                   position: "relative",
                   maxWidth: "100%",
                   overflow: "initial",
@@ -2496,12 +2495,11 @@ export default function HomePage() {
                     flexDirection: "row",
                     paddingTop: theme.spacing(2),
                   },
-                  width: "73%",
-                  height: "300px",
+                  width: "83%",
+                  height: "320px",
                   cursor: "pointer",
                   "&:hover": {
                     transform: "translateY(-4px)",
-                    boxShadow: "0px 16px 90px rgba(34, 35, 58, 0.3)",
                   },
                 })}
                 onClick={() => setOpenCardId("card8")}
@@ -2521,19 +2519,27 @@ export default function HomePage() {
                     },
                   })}
                 >
-                  <Box>
-                    <Image
-                      src={fyllan_logo}
-                      alt="Fyllan Logo"
+                  <Box
                       style={{
-                        objectFit: "cover",
-                        borderRadius: "200px",
-                        background: "transparent",
-                        width: "300px",
-                        height: "300px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "100%", 
+                        height: "100%",
                       }}
-                    />
-                  </Box>
+                    >
+                      <Image
+                        src={fyllan_logo}
+                        alt="Fyllan Logo"
+                        style={{
+                          objectFit: "cover",
+                          borderRadius: "150px",
+                          background: "transparent",
+                          width: "200px",
+                          height: "200px",
+                        }}
+                      />
+                    </Box>
                 </Box>
                 <CardContent>
                   <Typography
@@ -2727,7 +2733,7 @@ export default function HomePage() {
             </Box>
 
             {/*Fourth Section - Tech Stack*/}
-            <Box>
+            <Box sx={{ marginTop: "20px", paddingX: { xs: "10px", md: "50px" } }}>
               <Typography
                 variant="h1"
                 sx={{
