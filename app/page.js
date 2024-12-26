@@ -2763,7 +2763,6 @@ export default function HomePage() {
         fontFamily: "Kanit",
         fontWeight: 900,
         textTransform: "uppercase",
-        marginLeft: { xs: "0", md: "10px" }, // Matches card alignment on larger screens
       }}
     >
       <br />
@@ -2788,7 +2787,6 @@ export default function HomePage() {
       sx={{
         maxWidth: "1000px",
         justifyContent: "flex-start", // Aligns cards to the left
-        marginLeft: { xs: "0", md: "10px" }, // Matches text alignment for consistency
       }}
     >
       {[
