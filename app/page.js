@@ -2051,7 +2051,7 @@ export default function HomePage() {
                       fontFamily: "Kanit",
                     }}
                   >
-                    Software Engineer & Information Technology Intern
+                    Software Engineer & IT Intern
                   </Typography>
                   <Typography
                     variant="body2"
@@ -2196,7 +2196,7 @@ export default function HomePage() {
                             fontSize: "2rem",
                           }}
                         >
-                          Software Engineer & Information Technology Intern
+                          Software Engineer & IT Intern
                         </Typography>
                         <Typography
                           variant="body2"
