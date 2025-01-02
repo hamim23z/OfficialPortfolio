@@ -1783,7 +1783,7 @@ export default function HomePage() {
                       display: "inline-block",
                     }}
                   >
-                    July 2024 - Present | NYC Department of Records
+                    July 2024 - Jan 2024 | NYC Department of Records
                   </Typography>
                   <Typography
                     variant="h5"
@@ -1925,7 +1925,7 @@ export default function HomePage() {
                             display: "inline-block",
                           }}
                         >
-                          July 2024 - Present | NYC Department of Records
+                          July 2024 - Jan 2024 | NYC Department of Records
                         </Typography>
                         <Typography
                           variant="h5"
